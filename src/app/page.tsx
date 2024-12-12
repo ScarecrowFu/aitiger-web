@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWeixin, FaEnvelope } from 'react-icons/fa';
 import { IoNewspaper } from 'react-icons/io5';
+import { HeroBackground } from '@/components/hero-background';
 import type { HomeContent } from '@/types/home';
 
 // 动画配置
@@ -18,6 +19,11 @@ const animations = {
   fadeIn: {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
+    transition: { duration: 0.5 }
+  },
+  slideIn: {
+    initial: { opacity: 0, x: -20 },
+    animate: { opacity: 1, x: 0 },
     transition: { duration: 0.5 }
   }
 };
@@ -92,35 +98,36 @@ export default function Home() {
 
   return (
     <AnimatePresence>
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-hidden">
         <div className="relative">
           {/* Hero Section */}
-          <div className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
+          <div className="relative pt-16 pb-12 lg:pt-20 lg:pb-16">
+            <HeroBackground />
             <motion.div
               initial={animations.fadeInUp.initial}
               animate={animations.fadeInUp.animate}
               transition={animations.fadeInUp.transition}
-              className="text-center"
+              className="container mx-auto px-4 text-center"
             >
-              <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
                 {content.hero.title}
               </h1>
-              <p className="text-2xl text-gray-600 text-center max-w-3xl mx-auto mb-16">
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
                 {content.hero.description}
               </p>
               
               {/* 特性列表 */}
-              <div className="w-full max-w-5xl mx-auto space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-5xl mx-auto">
                 {content.hero.features.map((feature, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.2 }}
-                    className="flex items-center gap-6 p-8 bg-white/80 backdrop-blur-sm rounded-2xl hover:bg-white/90 transition-all shadow-sm hover:shadow-md"
+                    initial={animations.slideIn.initial}
+                    animate={animations.slideIn.animate}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-3 p-4 bg-white/80 backdrop-blur-sm rounded-xl hover:bg-white/90 transition-all shadow-sm hover:shadow-md group"
                   >
-                    <span className="text-4xl">{feature.icon}</span>
-                    <span className="text-lg text-gray-700 flex-1">{feature.text}</span>
+                    <span className="text-2xl lg:text-3xl group-hover:scale-110 transition-transform duration-300">{feature.icon}</span>
+                    <span className="text-sm lg:text-base text-gray-700 text-left flex-1">{feature.text}</span>
                   </motion.div>
                 ))}
               </div>
@@ -128,10 +135,10 @@ export default function Home() {
           </div>
 
           {/* AI商业落地区块 */}
-          <div id="business" className="py-32 relative rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-50/80 to-white/50 backdrop-blur-sm -z-20" />
-            <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-5 -z-10" />
-            <div className="max-w-[85%] mx-auto px-6 relative z-10">
+          <div id="tools" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-purple-50/80 to-white/50 backdrop-blur-sm -z-20" />
+            <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-5 -z-10" />
+            <div className="max-w-[85%] mx-auto px-6 relative">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -260,7 +267,7 @@ export default function Home() {
           </div>
 
 
-          {/* 工具箱区块 */}
+          {/* 工工具箱区块 */}
           <div id="tools" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-50/80 to-white/50 backdrop-blur-sm -z-20" />
             <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-5 -z-10" />

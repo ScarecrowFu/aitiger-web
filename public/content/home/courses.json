@@ -1,0 +1,27 @@
+{
+  "title": "AI商业落地实战攻略",
+  "description": "系统化的AI应用学习路径，助你快速掌握核心技能",
+  "courses": [
+    {
+      "title": "ChatGPT从零开始",
+      "icon": "🤖",
+      "items": ["基础认知", "快速入门操作", "Prompt进阶技巧", "GPTs高级功能"]
+    },
+    {
+      "title": "Midjourney入门进阶",
+      "icon": "🎨",
+      "items": ["账号注册", "基础用法", "参数详解", "风格调节"]
+    },
+    {
+      "title": "Stable Diffusion教程",
+      "icon": "🖼️",
+      "items": ["本地部署", "WebUI详解", "ControlNet教程", "商业实战"]
+    },
+    {
+      "title": "AI视频制作教程",
+      "icon": "🎬",
+      "items": ["AI视频入门", "Sora教学", "短视频制作", "商业变现"]
+    }
+  ],
+  "checkDetail": "查看完整课程内容"
+} 

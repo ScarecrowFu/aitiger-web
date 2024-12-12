@@ -1,0 +1,467 @@
+{
+  "hero": {
+    "title": "科虎AI工具箱",
+    "description": "关于科虎AI的视频发布记录以及工具资源"
+  },
+  "toolboxInstructions": [
+    "工具箱的所有链接（蓝色），网页端可以直接点击跳转",
+    "更新动态专区展示媒体平台上的视频更新记录以及所用到的工具",
+    "其他工具专区展示各种高效能的AI工具",
+    "工具会持续更新，如果工具链接失效或找不到工具，可联系微信咨询：fualan1990"
+  ],
+  "updateLogs": [
+    {
+      "date": "2024-12-2",
+      "title": "用Cursor AI打造数字货币自动交易系统",
+      "tools": [
+        { "name": "Cursor AI", "link": "https://www.cursor.com/" },
+        { "name": "交易专家专用提示词", "link": null }
+      ]
+    },
+    {
+      "date": "2024-11-25",
+      "title": "「30分钟」用Cursor AI开发双色球预测神器",
+      "tools": [
+        { "name": "Cursor AI", "link": "https://www.cursor.com/" },
+        { "name": "《幸运色彩》网站", "link": "https://lucky.aitiger.cc/" }
+      ]
+    },
+    {
+      "date": "2024-11-18",
+      "title": "爆红的AI猫咪剧情视频-胖橘猫故事如何制作？",
+      "tools": [
+        { "name": "ChatGPT", "link": "https://chatgpt.com/" },
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Stable Diffusion", "link": "https://pan.quark.cn/s/06712abc49a0" },
+        { "name": "教程物料(故事分镜助手提示词(英文)、故事分镜助手提示词(中文)、ReVAnimated模型、zz_网红大胖橘猫模型)", "link": "https://pan.quark.cn/s/09f335f1e450" }
+      ]
+    },
+    {
+      "date": "2024-11-1",
+      "title": "AI声音克隆神器，本地安装，1分钟样本即可克隆声音",
+      "tools": [
+        { "name": "GPT-SoVITS-语音训练整合包", "link": "https://pan.quark.cn/s/aca888f352f3" }
+      ]
+    },
+    {
+      "date": "2024-10-26",
+      "title": "AI脑洞对话视频",
+      "tools": [
+        { "name": "ChatGPT", "link": "https://chatgpt.com/" },
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Stable Diffusion", "link": "https://pan.quark.cn/s/06712abc49a0" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" },
+        { "name": "Midjourney提示词专家-英文模板", "link": null },
+        { "name": "Midjourney提示词专家-中文模板", "link": null }
+      ]
+    },
+    {
+      "date": "2024-10-10~2024-10-24",
+      "title": "Stable Diffusion教程 | AI时代下的AI绘画教程",
+      "tools": [
+        { "name": "【课程物料】、【课件图文教程】、【AI变现案例】、【20000+AI绘画关键词】、【文案语录】、【AIGC商业级万文教程】", 
+        "link": "https://pan.quark.cn/s/06712abc49a0" }
+      ]
+    },
+    {
+      "date": "2024-9-9~2024-9-21",
+      "title": "Midjourney教程 | 1小时掌握Midjourney",
+      "tools": [
+        { "name": "【课件图文教程】、【AI变现案例】、【20000+AI绘画关键词】、【文案语录】、【AIGC商业级万文教程】", 
+        "link": "https://pan.quark.cn/s/9bc03131a38a" }
+      ]
+    },
+    {
+      "date": "2024-9-2",
+      "title": "《黑神话悟空》热潮下的商机：隐藏着哪些副业赚钱赛道",
+      "tools": [
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "即梦AI", "link": "https://jimeng.jianying.com/ai-tool/home/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "哩布哩布", "link": "https://www.liblib.art/" },
+        { "name": "Coze-黑神话悟空换脸-智能体", "link": "https://www.coze.cn/store/bot/7405142882090254375?bid=6dl8jrhcg5g0c&from=bots_card&panel=1" },
+        { "name": "comfyUI-换脸工作流", "link": "https://www.liblib.art/comfy?opencomfy=workflowData-1987888&comfyname=InstantID%E9%AB%98%E6%B8%85%E6%8D%A2%E8%84%B8%E4%B8%A8%E6%94%AF%E6%8C%81%E5%9C%A8%E7%BA%BF%E7%94%9F%E6%88%90InstantID%E9%AB%98%E6%B8%85%E6%8D%A2%E8%84%B8&comfyOrid=2f48dddb2e7641c6a2c99c26f8a30ba9" },
+        { "name": "GPT-SoVITS-语音训练整合包", "link": "https://pan.quark.cn/s/aca888f352f3" },
+        { "name": "黑神话悟空资源素材工具整合包", "link": "https://pan.quark.cn/s/1e59663d3752" },
+        { "name": "黑神话悟空6种赛道的图文教程", "link": "https://pan.quark.cn/s/0ba51bbdc3d1" }
+      ]
+    },
+    {
+      "date": "2024-8-23",
+      "title": "AI制作神话故事",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" }
+      ]
+    },
+    {
+      "date": "2024-8-21",
+      "title": "AI跨时空对话2.0，现象级爆火玩法",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "美图秀秀拼图", "link": "https://pc.meitu.com/toolbox" },
+        { "name": "佐糖", "link": "https://picwish.cn/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" }
+      ]
+    },
+    {
+      "date": "2024-8-19",
+      "title": "AI老照片复活2.0，新赛道玩法实操",
+      "tools": [
+        { "name": "魔塔", "link": "https://modelscope.cn/studios/iic/old_photo_restoration" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" },
+        { "name": "Fish Audio", "link": "https://fish.audio/zh-CN/" },
+        { "name": "hedra ai", "link": "https://www.hedra.com/" }
+      ]
+    },
+    {
+      "date": "2024-8-15",
+      "title": "完全免费的AI文字转语音工具",
+      "tools": [
+        { "name": "Fish Audio", "link": "https://fish.audio/zh-CN/" }
+      ]
+    },
+    {
+      "date": "2024-8-14",
+      "title": "AI火柴人视频，热门视频上亿的播放，一个月盈利上万",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Fish Audio", "link": "https://fish.audio/zh-CN/" },
+        { "name": "Adobe Express", "link": "https://new.express.adobe.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" }
+      ]
+    },
+    {
+      "date": "2024-8-8",
+      "title": "九种最近非常热门的AI视频应用赛道",
+      "tools": [
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "即梦AI", "link": "https://jimeng.jianying.com/ai-tool/home/" },
+        { "name": "清影AI", "link": "https://chatglm.cn/video" },
+        { "name": "Dream Machine", "link": "https://lumalabs.ai/dream-machine" },
+        { "name": "Haiper AI", "link": "https://haiper.ai/home" },
+        { "name": "Pixverse AI", "link": "https://pixverse.ai/" },
+        { "name": "Runway gen", "link": "https://app.runwayml.com/" },
+        { "name": "Vidu AI", "link": "https://www.vidu.studio/" },
+        { "name": "Animate anyone", "link": "https://humanaigc.github.io/animate-anyone/" },
+        { "name": "musepose", "link": "https://github.com/TMElyralab/MusePose" },
+        { "name": "Viggle AI", "link": "https://viggle.ai/" },
+        { "name": "domo AI", "link": "https://domoai.app/" }
+      ]
+    },
+    {
+      "date": "2024-8-7",
+      "title": "AI菌子幻觉视频",
+      "tools": [
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" }
+      ]
+    },
+    {
+      "date": "2024-8-3",
+      "title": "AI时尚宠物",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "AI绘画提示词专家", "link": "http://aitiger.cc/article/73/" }
+      ]
+    },
+    {
+      "date": "2024-8-2",
+      "title": "AI治愈日记",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" },
+        { "name": "国际版-可灵AI", "link": "https://klingai.com/" },
+        { "name": "AI绘画提示词专家", "link": "http://aitiger.cc/article/73/" }
+      ]
+    },
+    {
+      "date": "2024-8-1",
+      "title": "AI荒谬视频",
+      "tools": [
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "国际版-可灵AI", "link": "https://klingai.com/" }
+      ]
+    },
+    {
+      "date": "2024-7-31",
+      "title": "浅谈可灵AI无限积分信息差",
+      "tools": [
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "国际版-可灵AI", "link": "https://klingai.com/" }
+      ]
+    },
+    {
+      "date": "2024-7-30",
+      "title": "AI微缩电影",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" }
+      ]
+    },
+    {
+      "date": "2024-7-29",
+      "title": "AI机器人视频",
+      "tools": [
+        { "name": "motionshop", "link": "https://modelscope.cn/studios/Damo_XR_Lab/motionshop" }
+      ]
+    },
+    {
+      "date": "2024-7-27",
+      "title": "AI奇观视频，冷门快速涨粉赛道",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "即梦AI", "link": "https://jimeng.jianying.com/ai-tool/home/" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "剪映", "link": "https://www.capcut.cn/" },
+        { "name": "AI绘画提示词专家", "link": "http://aitiger.cc/article/73/" }
+      ]
+    },
+    {
+      "date": "2024-7-24",
+      "title": "可灵AI收费，赛道变化和变现方式",
+      "tools": [
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" },
+        { "name": "变现方式和课程大纲设计", "link": "https://mp.weixin.qq.com/s?__biz=MzkxODcxNDYyMw==&mid=2247484598&idx=1&sn=7b8bc12966ba3e9c56a7c51e2650422e&chksm=c1ac6526f6dbec30f8e88cc72417af5008b5b7d2929e88481f8f883ab2bad9586e090e1c6f4f&token=278203831&lang=zh_CN#rd" }
+      ]
+    },
+    {
+      "date": "2024-7-24",
+      "title": "AI动物时装秀",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" }
+      ]
+    },
+    {
+      "date": "2024-7-23",
+      "title": "AI城市动物守护神",
+      "tools": [
+        { "name": "KIMI", "link": "https://kimi.moonshot.cn/" },
+        { "name": "Midjourney", "link": "https://www.midjourney.com/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" }
+      ]
+    },
+    {
+      "date": "2024-7-23",
+      "title": "AI跨时空对话1分钟教程",
+      "tools": [
+        { "name": "美图秀秀拼图", "link": "https://pc.meitu.com/toolbox" },
+        { "name": "佐糖", "link": "https://picwish.cn/" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" }
+      ]
+    },
+    {
+      "date": "2024-7-23",
+      "title": "AI老照片复活1分钟教程",
+      "tools": [
+        { "name": "魔塔老照片修复", "link": "https://modelscope.cn/studios/iic/old_photo_restoration" },
+        { "name": "可灵AI", "link": "https://klingai.kuaishou.com/" }
+      ]
+    }
+  ],
+
+  "toolboxSections": [
+    {
+      "title": "热门AI视频工具",
+      "items": [
+        {
+            "name": "Sora",
+            "desc": "OpenAI官方工具 | 效果稳定",
+            "logo": "/images/tools/sora.png",
+            "link": "https://sora.com"
+          },
+        {
+          "name": "可灵AI",
+          "desc": "每天66积分 | 可生成稳定AI视频生成效果",
+          "logo": "/images/tools/ling-ai.png",
+          "link": "https://klingai.kuaishou.com/"
+        },
+        {
+          "name": "即梦AI",
+          "desc": "每天60积分 | 智能画作 | 故事创作",
+          "logo": "/images/tools/jimeng-ai.png",
+          "link": "https://jimeng.jianying.com/ai-tool/home/"
+        },
+        {
+          "name": "清影AI",
+          "desc": "免费用户生成权限 | 清华团队 | 电影质感",
+          "logo": "/images/tools/qingying-ai.png",
+          "link": "https://chatglm.cn/video"
+        },
+        {
+          "name": "Vidu AI",
+          "desc": "每天64积分 | 清华团队",
+          "logo": "/images/tools/vidu-ai.png",
+          "link": "https://www.vidu.studio/"
+        },
+        {
+          "name": "Dream Machine",
+          "desc": "每月免费生成30个视频 | 国外AI视频工具龙头",
+          "logo": "/images/tools/dream-machine.png",
+          "link": "https://lumalabs.ai/dream-machine"
+        },
+        {
+          "name": "Runway Gen-2/3",
+          "desc": "Gen-2免费 | Gen-3收费",
+          "logo": "/images/tools/runway-gen.png",
+          "link": "https://app.runwayml.com/"
+        },
+        {
+          "name": "Haiper AI",
+          "desc": "每天10个视频 | 300积分",
+          "logo": "/images/tools/haiper-ai.png",
+          "link": "https://haiper.ai/home"
+        },
+        {
+          "name": "Pixverse AI",
+          "desc": "每天50积分 | 新晋工具",
+          "logo": "/images/tools/pixverse-ai.png",
+          "link": "https://pixverse.ai/"
+        },
+        {
+          "name": "Viggle AI",
+          "desc": "动作复制图像角色 | 角色完整",
+          "logo": "/images/tools/viggle-ai.png",
+          "link": "https://viggle.ai/"
+        },
+        {
+          "name": "Domo AI",
+          "desc": "真人视频转为动漫风格",
+          "logo": "/images/tools/domo-ai.png",
+          "link": "https://domoai.app/"
+        }
+      ]
+    },
+    {
+      "title": "配音工具",
+      "items": [
+        {
+          "name": "Text-To-Speech",
+          "desc": "上百种语言 | 几十种语音 | 情感调节",
+          "logo": "/images/tools/tts.png",
+          "link": "http://www.ttsgpt.cn/"
+        },
+        {
+          "name": "免费微软AI配音",
+          "desc": "tts-vue | 免费使用 | 智能识别",
+          "logo": "/images/tools/microsoft-tts.png",
+          "link": "https://toolb.cn/textspeech"
+        },
+        {
+          "name": "AI克隆翻唱工具",
+          "desc": "克隆翻唱 | 选择性多",
+          "logo": "/images/tools/ai-clone.png",
+          "link": "https://www.topmediai.com/"
+        },
+        {
+          "name": "声音克隆AI工具",
+          "desc": "声音克隆 | 每天免费点数",
+          "logo": "/images/tools/voice-clone.png",
+          "link": "https://dash.reecho.cn/overview"
+        },
+        {
+          "name": "TTS免费语音工具",
+          "desc": "海豚AI | 每天免费点数",
+          "logo": "/images/tools/tts-free.png",
+          "link": "https://www.ttson.cn/"
+        },
+        {
+          "name": "Fish.Audio",
+          "desc": "SVC / TTS 项目 | 超多克隆角色",
+          "logo": "/images/tools/fish-audio.png",
+          "link": "https://fish.audio/zh-CN/"
+        },
+        {
+          "name": "GPT-SoVITS整合包",
+          "desc": "少量音频克隆 | 本地启动整合包",
+          "logo": "/images/tools/gpt-sovits.png",
+          "link": "https://pan.quark.cn/s/aca888f352f3"
+        }
+      ]
+    },
+    {
+      "title": "素材网站",
+      "items": [
+        {
+          "name": "PPT模板",
+          "desc": "PPT模板免费下载",
+          "logo": "/images/tools/ppt-template.png",
+          "link": "https://www.1ppt.com/"
+        },
+        {
+          "name": "免费电子书",
+          "desc": "电子书 | 免费下载",
+          "logo": "/images/tools/free-ebook.png",
+          "link": "https://www.jiumodiary.com/"
+        },
+        {
+          "name": "找台词",
+          "desc": "找台词 | 根据台词找视频",
+          "logo": "/images/tools/find-dialogue.png",
+          "link": "http://www.zhaotaici.cn/"
+        },
+        {
+          "name": "聊天记录生成",
+          "desc": "在线生成聊天记录",
+          "logo": "/images/tools/chat-record.png",
+          "link": "http://www.12tool.com/Index/index.html"
+        },
+        {
+          "name": "软件工具箱",
+          "desc": "超全软件工具箱 | 提供下载",
+          "logo": "/images/tools/software-toolkit.png",
+          "link": "https://www.qijishow.com/down/index.html"
+        },
+        {
+          "name": "短视频素材",
+          "desc": "一站式短视频素材",
+          "logo": "/images/tools/short-video.png",
+          "link": "https://www.heycan.com/material#all"
+        },
+        {
+          "name": "幼儿启蒙素材",
+          "desc": "幼儿启蒙资料 | 鸡娃客",
+          "logo": "/images/tools/child-education.png",
+          "link": "https://www.jiwake.com/"
+        },
+        {
+          "name": "影视解说素材",
+          "desc": "影视解说短视频 | 影视解说配音",
+          "logo": "/images/tools/movie-commentary.png",
+          "link": "https://www.6pian.cn/"
+        },
+        {
+          "name": "星座类素材",
+          "desc": "星座素材 | 十二生肖素材",
+          "logo": "/images/tools/zodiac.png",
+          "link": "https://www.d1xz.net/"
+        },
+        {
+          "name": "冷知识素材",
+          "desc": "十万个冷知识 | 冷知识大全",
+          "logo": "/images/tools/cold-knowledge.png",
+          "link": "http://www.quzhishi.com/"
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "link": "https://t.zsxq.com/QJabH",
+    "text": "加入学习社群"
+  },
+  "defaultLogo": "/images/tool-default.png"
+} 

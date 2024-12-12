@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "我开发的应用",
+    "description": "使用AI技术开发的实用工具和应用"
+  },
+  "apps": [
+    {
+      "title": "AI双色球预测",
+      "desc": "基于机器学习的双色球智能预测系统，集成历史数据分析和AI模型预测",
+      "image": "/images/apps/lottery.png",
+      "link": "https://pick.aitiger.cc/",
+      "github": "https://lucky.aitiger.cc/",
+      "tags": ["Python", "机器学习", "数据分析"],
+      "status": "online"
+    },
+    {
+      "title": "OKX交易机器人",
+      "desc": "智能加密货币交易系统，支持多策略自动化交易",
+      "image": "/images/apps/trading.png",
+      "link": "https://okx.aitiger.cc/",
+      "github": null,
+      "tags": ["Python", "量化交易", "加密货币"],
+      "status": "online"
+    },
+    {
+      "title": "AI提示词工程师",
+      "desc": "AI提示词优化与管理工具，帮助用户更好地使用AI工具",
+      "image": "/images/apps/prompt.png",
+      "link": "https://prompt.scitiger.cn",
+      "tags": ["React", "AI", "工具"],
+      "status": "development"
+    }
+  ],
+  "more": {
+    "text": "更多有趣的应用正在开发中，敬请期待...",
+    "cta": {
+      "text": "学习如何开发",
+      "link": "/code"
+    }
+  }
+} 
