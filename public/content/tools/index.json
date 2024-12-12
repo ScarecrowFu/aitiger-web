@@ -11,6 +11,13 @@
   ],
   "updateLogs": [
     {
+      "date": "2024-12-4~2024-12-13",
+      "title": "ChatGPT从零开始快速入门到精通",
+      "tools": [
+        { "name": "ChatGPT", "link": "https://chatgpt.com/" }
+      ]
+    },
+    {
       "date": "2024-12-2",
       "title": "用Cursor AI打造数字货币自动交易系统",
       "tools": [
