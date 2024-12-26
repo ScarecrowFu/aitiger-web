@@ -11,6 +11,27 @@
   ],
   "updateLogs": [
     {
+      "date": "2024-12-24",
+      "title": "用Cursor AI打造AI员工，玩转小绿书新蓝海赛道",
+      "tools": [
+        { "name": "公众号语录图文智能助手", "link": "https://auto.aitiger.cc/" }
+      ]
+    },
+    {
+      "date": "2024-12-21",
+      "title": "入门AI视频必看！AI视频创作最全指南",
+      "tools": [
+        { "name": "图文资料", "link": null }
+      ]
+    },
+    {
+      "date": "2024-12-14",
+      "title": "全网最全AI视频提示词技巧",
+      "tools": [
+        { "name": "图文资料", "link": null }
+      ]
+    },
+    {
       "date": "2024-12-4~2024-12-13",
       "title": "ChatGPT从零开始快速入门到精通",
       "tools": [

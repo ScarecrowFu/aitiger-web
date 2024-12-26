@@ -114,9 +114,15 @@ export default function AppsPage() {
                   <span className={`px-3 py-1 rounded-full text-sm ${
                     app.status === 'online' 
                       ? 'bg-green-100 text-green-600'
-                      : 'bg-yellow-100 text-yellow-600'
+                      : app.status === 'development'
+                        ? 'bg-yellow-100 text-yellow-600'
+                        : 'bg-red-100 text-red-600'
                   }`}>
-                    {app.status === 'online' ? '已上线' : '开发中'}
+                    {app.status === 'online' 
+                      ? '已上线' 
+                      : app.status === 'development'
+                        ? '开发中'
+                        : '已下线'}
                   </span>
                 </div>
               </div>

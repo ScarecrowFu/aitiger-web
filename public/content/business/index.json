@@ -13,12 +13,12 @@
     {
       "title": "第一章【ChatGPT从零开始快速入门精通】",
       "items": [
-        { "text": "ChatGPT基础认知", "link": null },
-        { "text": "ChatGPT快速入门操作", "link": null },
-        { "text": "Prompt进阶技巧", "link": null },
-        { "text": "ChatGPT高级功能(GPTs)", "link": null },
-        { "text": "ChatGPT应用扩展", "link": null },
-        { "text": "特别篇-15种ChatGPT的实用技巧", "link": null }
+        { "text": "ChatGPT基础认知", "link": "https://www.bilibili.com/video/BV1gcz1YEEZZ/" },
+        { "text": "ChatGPT快速入门操作", "link": "https://www.bilibili.com/video/BV1DfzyYUEUq/" },
+        { "text": "Prompt进阶技巧", "link": "https://www.bilibili.com/video/BV13fzyYSE37/" },
+        { "text": "ChatGPT高级功能(GPTs)", "link": "https://www.bilibili.com/video/BV1hfzyYUE53/" },
+        { "text": "ChatGPT应用扩展", "link": "https://www.bilibili.com/video/BV1iWqbY6EBb/" },
+        { "text": "特别篇-15种ChatGPT的实用技巧", "link": "https://www.bilibili.com/video/BV1EjqbYLE9h/" }
       ]
     },
     {
@@ -125,8 +125,8 @@
     {
       "title": "第九章【AI视频入门】",
       "items": [
-        { "text": "AI视频提示词技巧", "link": null },
-        { "text": "一口气入门AI视频", "link": null },
+        { "text": "AI视频提示词技巧", "link": "https://www.bilibili.com/video/BV1v1qtYiEcY/" },
+        { "text": "一口气入门AI视频", "link": "https://www.bilibili.com/video/BV1cYk4YsEvy/" },
         { "text": "Sora保姆级教学", "link": null }
       ]
     },
