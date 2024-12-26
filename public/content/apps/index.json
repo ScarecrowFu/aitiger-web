@@ -25,7 +25,7 @@
       "title": "OKX交易机器人",
       "desc": "智能加密货币交易系统，支持多策略自动化交易",
       "image": "/images/apps/trading.png",
-      "link": "https://okx.aitiger.cc/",
+      "link": "#",
       "github": null,
       "tags": ["Python", "量化交易", "加密货币"],
       "status": "offline"
