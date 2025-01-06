@@ -3,6 +3,12 @@
   "description": "使用AI技术开发的实用工具和应用，从构思到落地的完整案例",
   "apps": [
     {
+      "title": "小蜜蜂全自动智能助手",
+      "desc": "全自动操作网易小蜜蜂，自动发帖、回复、点赞、关注",
+      "image": "/images/apps/bee.png",
+      "icon": "📈"
+    },
+    {
       "title": "公众号语录图文智能助手",
       "desc": "自动化生成与发布微信公众号图文，素材整理",
       "image": "/images/apps/wechat1.png",
@@ -13,12 +19,6 @@
       "desc": "基于机器学习的双色球智能预测系统",
       "image": "/images/apps/lottery.png",
       "icon": "🎯"
-    },
-    {
-      "title": "OKX交易机器人",
-      "desc": "智能加密货币交易系统，支持多策略自动化交易",
-      "image": "/images/apps/trading.png",
-      "icon": "📈"
     }
   ],
   "checkDetail": "查看完整应用列表"
