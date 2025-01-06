@@ -89,6 +89,16 @@ export default function CodePage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto relative">
             {content.hero.description}
           </p>
+          <Link
+            href={content.cta.link}
+            target="_blank"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg hover:shadow-xl"
+          >
+            <span className="text-lg">{content.cta.text}</span>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </motion.div>
 
         {/* 内容部分 */}
