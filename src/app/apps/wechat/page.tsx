@@ -250,7 +250,7 @@ export default function WechatPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">操作教程</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              通过详细的视频教程，快速掌握工具的使用方法
+            工具简略教程，详细使用教程需付费订阅或加入知识星球
             </p>
           </div>
           
