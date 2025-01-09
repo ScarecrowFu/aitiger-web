@@ -6,9 +6,9 @@
   "apps": [
     {
       "title": "小蜜蜂全自动智能助手",
-      "desc": "全自动操作网易小蜜蜂，自动发帖、回复、点赞、关注",
+      "desc": "全自动操作网易小蜜蜂，启动安卓模拟器，自动发帖、回复、点赞、关注",
       "image": "/images/apps/bee.png",
-      "link": "https://auto.aitiger.cc/bee",
+      "link": "/apps/bee",
       "tags": ["全自动", "AI", "小蜜蜂"],
       "status": "online"
     },
@@ -16,7 +16,7 @@
       "title": "公众号语录图文智能助手",
       "desc": "自动化生成与发布微信公众号图文，素材整理、生成及内容发布",
       "image": "/images/apps/wechat1.png",
-      "link": "https://auto.aitiger.cc/",
+      "link": "/apps/wechat",
       "tags": ["全自动", "AI", "公众号"],
       "status": "online"
     },

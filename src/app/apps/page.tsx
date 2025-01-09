@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { AppsContent } from '@/types/apps';
 
+
 export default function AppsPage() {
   const [content, setContent] = useState<AppsContent | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -157,6 +158,7 @@ export default function AppsPage() {
                     <Link
                       href={app.github}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                     >
                       源码

@@ -25,7 +25,7 @@ const qrcodes: QRCodeItem[] = [
   {
     icon: IoMdPeople,
     title: "加入社群",
-    image: "/images/qrcode/aiCode.png",
+    image: "/images/qrcode/zsxq_qrcode.png",
     description: "与成员交流学习",
     color: "from-blue-400 to-blue-600"
   },
