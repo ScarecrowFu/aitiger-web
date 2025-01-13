@@ -29,7 +29,7 @@ export default function WechatPage() {
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Link 
-                href="https://api.aitiger.cc/static/versions/%E5%B0%8F%E7%BB%BF%E4%B9%A6%E8%AF%AD%E5%BD%95%E5%9B%BE%E6%96%87%E6%99%BA%E8%83%BD%E5%91%98%E5%B7%A5-%E7%A7%91%E8%99%8EAI.exe" 
+                href="https://app.aitiger.cc/static/versions/wechat/wechatAI.exe" 
                 target="_blank"
                 className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
@@ -276,7 +276,7 @@ export default function WechatPage() {
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Link 
-                href="https://api.aitiger.cc/static/versions/%E5%B0%8F%E7%BB%BF%E4%B9%A6%E8%AF%AD%E5%BD%95%E5%9B%BE%E6%96%87%E6%99%BA%E8%83%BD%E5%91%98%E5%B7%A5-%E7%A7%91%E8%99%8EAI.exe" 
+                href="https://app.aitiger.cc/static/versions/wechat/wechatAI.exe" 
                 target="_blank"
                 className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
