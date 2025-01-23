@@ -14,7 +14,7 @@
     },
     {
       "title": "公众号语录图文智能助手",
-      "desc": "自动化生成与发布微信公众号图文，素材整理、生成及内容发布",
+      "desc": "自动化生成与发布微信公众号图文，AI生成图文、AI生成内容、AI生成配图",
       "image": "/images/apps/wechat1.png",
       "link": "/apps/wechat",
       "tags": ["全自动", "AI", "公众号"],
@@ -22,7 +22,7 @@
     },
     {
       "title": "AI双色球预测",
-      "desc": "基于机器学习的双色球预测系统，集成数据分析和AI模型预测",
+      "desc": "基于机器学习的双色球预测系统，集成数据分析和AI模型预测的彩票预测工具",
       "image": "/images/apps/lottery.png",
       "link": "https://pick.aitiger.cc/",
       "github": null,
