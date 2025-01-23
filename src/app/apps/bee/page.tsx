@@ -24,7 +24,7 @@ export default function WechatPage() {
             网易小蜜蜂自动化工具-BeeAuto
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
-            动化工具，支持模拟器与应用管理，自动发帖、自动点赞、自动评论和自动关注等功能。
+            自动化工具，支持模拟器与应用管理，自动发帖、自动点赞、自动评论和自动关注等功能。
             </p>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
             不仅仅是小蜜蜂自动化，还有AI功能的笔记管理，以及小红书爬虫。
