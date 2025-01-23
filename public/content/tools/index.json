@@ -11,6 +11,34 @@
   ],
   "updateLogs": [
     {
+      "date": "2025-01-24",
+      "title": "Cursor AI实战，打造小蜜蜂智能助手第四期",
+      "tools": [
+        { "name": "小蜜蜂自动化助手", "link": "/apps/bee" }
+      ]
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Cursor AI实战，打造小蜜蜂智能助手第三期",
+      "tools": [
+        { "name": "小蜜蜂自动化助手", "link": "/apps/bee" }
+      ]
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Cursor AI实战，打造小蜜蜂智能助手第二期",
+      "tools": [
+        { "name": "小蜜蜂自动化助手", "link": "/apps/bee" }
+      ]
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Cursor AI实战，打造小蜜蜂智能助手第一期",
+      "tools": [
+        { "name": "小蜜蜂自动化助手", "link": "/apps/bee" }
+      ]
+    },
+    {
       "date": "2025-01-03",
       "title": "用Cursor AI打造小蜜蜂自动化助手，抓住平台红利",
       "tools": [
