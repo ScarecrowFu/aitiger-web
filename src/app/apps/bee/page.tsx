@@ -21,20 +21,17 @@ export default function WechatPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-white to-slate-50">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
-            网易小蜜蜂自动化工具
+            网易小蜜蜂自动化工具-BeeAuto
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
-            网易小蜜蜂的自动化工具，支持模拟器与应用管理，自动发帖、自动点赞、自动评论和自动关注等功能，还有AI功能的笔记管理，多任务执行。
+            网易小蜜蜂的自动化工具，支持模拟器与应用管理，自动发帖、自动点赞、自动评论和自动关注等功能，还有AI功能的笔记管理，以及小红书爬虫。
             </p>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
-            目前使用比较困难，由于需要使用到模拟器，所以需要安装Android SDK，请确保您的电脑上已经安装了Android SDK。
-            </p>
-            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
-            后续将会进行集成，不再需要配置模拟器，直接使用应用进行操作，敬请期待。
+            初次打开软件时，软件会自动配置环境并下载模拟器，请耐心等待
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Link 
-                href="https://api.aitiger.cc/static/versions/bee.exe" 
+                href="https://app.aitiger.cc/static/versions/bee/BeeAuto.exe" 
                 target="_blank"
                 className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
@@ -101,13 +98,13 @@ export default function WechatPage() {
                   <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  自动活跃，包括自动点赞、自动评论、自动关注
+                 自动点赞、自动评论
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  互相关注，主动回关粉丝
+                  自动关注
                 </li>
               </ul>
             </div>
@@ -130,7 +127,7 @@ export default function WechatPage() {
                   <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  AI生成配图与图文合成
+                  小红书笔记爬虫
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -281,7 +278,7 @@ export default function WechatPage() {
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Link 
-                href="https://api.aitiger.cc/static/versions/bee.exe" 
+                href="https://app.aitiger.cc/static/versions/bee/BeeAuto.exe" 
                 target="_blank"
                 className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
