@@ -25,9 +25,19 @@ export default function WechatPage() {
               公众号语录图文智能工作流助手
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
+            该产品已经不再更新，可能已无法使用, 如对代码感兴趣，请点击下方购买源码。
+            </p>
+            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
               自动使用KiMI生成语录、自动使用可灵AI生成图片、自动合并图文、自动化发布微信公众号图文，解决素材整理、生成及内容发布的繁琐过程。
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
+            <Link 
+                href="https://app.aitiger.cc/source-codes/3/" 
+                target="_blank"
+                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                购买源码
+              </Link>
               <Link 
                 href="https://app.aitiger.cc/static/versions/wechat/wechatAI.exe" 
                 target="_blank"

@@ -24,6 +24,9 @@ export default function WechatPage() {
             网易小蜜蜂自动化工具-BeeAuto
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
+            该产品已经不再更新，可能已无法使用, 如对代码感兴趣，请点击下方购买源码。
+            </p>
+            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
             自动化工具，支持模拟器与应用管理，自动发帖、自动点赞、自动评论和自动关注等功能。
             </p>
             <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
@@ -33,6 +36,13 @@ export default function WechatPage() {
             初次打开软件时，软件会自动配置环境并下载模拟器，请耐心等待
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
+            <Link 
+                href="https://app.aitiger.cc/source-codes/4/" 
+                target="_blank"
+                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                购买源码
+              </Link>
               <Link 
                 href="https://app.aitiger.cc/static/versions/bee/BeeAuto.exe" 
                 target="_blank"

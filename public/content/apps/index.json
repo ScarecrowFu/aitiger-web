@@ -9,6 +9,7 @@
       "desc": "全自动操作，自动发帖、回复、点赞、关注、AI笔记管理、小红书爬虫",
       "image": "/images/apps/bee.png",
       "link": "/apps/bee",
+      "github": "https://app.aitiger.cc/source-codes/4/",
       "tags": ["全自动", "AI", "小蜜蜂"],
       "status": "online"
     },
@@ -17,6 +18,7 @@
       "desc": "自动化生成与发布微信公众号图文，AI生成图文、AI生成内容、AI生成配图",
       "image": "/images/apps/wechat1.png",
       "link": "/apps/wechat",
+      "github": "https://app.aitiger.cc/source-codes/3/",
       "tags": ["全自动", "AI", "公众号"],
       "status": "online"
     },
@@ -25,7 +27,7 @@
       "desc": "基于机器学习的双色球预测系统，集成数据分析和AI模型预测的彩票预测工具",
       "image": "/images/apps/lottery.png",
       "link": "https://pick.aitiger.cc/",
-      "github": null,
+      "github": "https://app.aitiger.cc/source-codes/2/",
       "tags": ["Python", "机器学习", "数据分析"],
       "status": "online"
     },
@@ -34,7 +36,7 @@
       "desc": "智能加密货币交易系统，支持多策略自动化交易",
       "image": "/images/apps/trading.png",
       "link": "#",
-      "github": null,
+      "github": "https://app.aitiger.cc/source-codes/1/",
       "tags": ["Python", "量化交易", "加密货币"],
       "status": "offline"
     }
