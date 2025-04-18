@@ -41,14 +41,14 @@
       {
         "name": "Alan",
         "role": "创始人 & AI技术专家",
-        "avatar": "/images/about/alan.png",
-        "desc": "前字节跳动技术专家，10年+互联网开发经验，专注AI领域研究与应用"
+        "avatar": "/images/about/tiger.png",
+        "desc": "10年+互联网开发经验，专注AI领域研究与应用"
       },
       {
-        "name": "小虎",
-        "role": "AI商业应用专家",
-        "avatar": "/images/about/tiger.png",
-        "desc": "前阿里商业专家，8年+商业变现经验，擅长AI商业落地与变现"
+        "name": "BaconKwan",
+        "role": "创始人 & AI商业应用专家",
+        "avatar": "/images/about/alan.png",
+        "desc": "10年+商业变现经验，擅长AI商业落地与变现"
       }
     ]
   },
@@ -56,7 +56,7 @@
     "title": "发展历程",
     "list": [
       {
-        "date": "2024年12月",
+        "date": "2025年5月",
         "title": "科虎AI正式成立",
         "desc": "致力于为用户提供优质的AI学习资源与实战指导"
       }
