@@ -1,64 +1,52 @@
 {
   "hero": {
-    "title": "AI商业落地实战攻略",
-    "description": "从入门到精通的AI应用学习路径，助你快速掌握商业变现技能"
+    "title": "AI风向智创社",
+    "description": "AI工具完整教程、全球AI晨报、商业变现赛道、工具链深度测评、智能体工坊"
   },
   "courseOutline": [
     {
-      "title": "第零章【宣导篇】",
+      "title": "AI实战赋能社区",
       "items": [
-        { "text": "课程前言", "link": null }
+        { "text": "已有课程覆盖ChatGPT、Midjourney、stable diffusion、Deepseek", "link": null },
+        { "text": "让AI成为你的第二大脑 | 实战派内容生产中枢", "link": null },
+        { "text": "工具链深度测评 × 前沿趋势预判 × 场景化教学矩阵", "link": null },
+        { "text": "爆款内容公式库：短视频脚本生成器×跨境素材模板×数字人直播话术库", "link": null },
+        { "text": "全球AI晨报：重大技术突破/政策风向/资本动态", "link": null }
       ]
     },
     {
-      "title": "第一章【ChatGPT从零开始快速入门精通】",
+      "title": "【ChatGPT从零开始快速入门精通】",
       "items": [
         { "text": "ChatGPT基础认知", "link": "https://www.bilibili.com/video/BV1gcz1YEEZZ/" },
-        { "text": "ChatGPT快速入门操作", "link": "https://www.bilibili.com/video/BV1DfzyYUEUq/" },
-        { "text": "Prompt进阶技巧", "link": "https://www.bilibili.com/video/BV13fzyYSE37/" },
-        { "text": "ChatGPT高级功能(GPTs)", "link": "https://www.bilibili.com/video/BV1hfzyYUE53/" },
-        { "text": "ChatGPT应用扩展", "link": "https://www.bilibili.com/video/BV1iWqbY6EBb/" },
+        { "text": "ChatGPT快速入门操作", "link": null},
+        { "text": "Prompt进阶技巧", "link": null },
+        { "text": "ChatGPT高级功能(GPTs)", "link": null },
+        { "text": "ChatGPT应用扩展", "link": null },
         { "text": "特别篇-15种ChatGPT的实用技巧", "link": "https://www.bilibili.com/video/BV1EjqbYLE9h/" }
       ]
     },
     {
-      "title": "第二章【Midjourney小白零基础入门进阶】",
+      "title": "【Midjourney小白零基础入门进阶】",
       "items": [
         { "text": "【Midjourney入门】 账号注册", "link": "https://www.bilibili.com/video/BV1xdtre9E97/" },
         { "text": "【Midjourney入门】 基础用法", "link": "https://www.bilibili.com/video/BV1xdtre9ETo/" },
         { "text": "【Midjourney入门】 imagine指令详解", "link": "https://www.bilibili.com/video/BV11dtre9Eio/" },
-        { "text": "【Midjourney入门】 参数详解：Aspect Ratios(--ar)、Chaos(--c)、Image Weight(--iw)、Quality(--q)", "link": "https://www.bilibili.com/video/BV12dtre9EH9/" },
-        { "text": "【Midjourney入门】 参数详解：No(--no)、Repeat(--r)、Seed(--seed)、Stop(--stop)", "link": "https://www.bilibili.com/video/BV1xdtreREeR/" },
-        { "text": "【Midjourney入门】 参数详解：Style(--style)、Stylize(--stylize)、Weird(--w)、Character Reference(--cref)、Style Reference(--sref)", "link": "https://www.bilibili.com/video/BV19bsUeyEE7/" },
-        { "text": "【Midjourney入门】 参数详解：Tile(--tile)、Video(--video)、Personalization (--p)、Fast(--fast)、Relax(--relax)、Turbo(--turbo)", "link": "https://www.bilibili.com/video/BV1s2sUeAEL5/" },
-        { "text": "【Midjourney进阶】获取&精简提示词(describe&shorten)", "link": "https://www.bilibili.com/video/BV1pSsUecEyv/" },
-        { "text": "【Midjourney进阶】Settings指令详细讲解", "link": "https://www.bilibili.com/video/BV1CmsUeaE9X/" },
-        { "text": "【Midjourney进阶】图像局部重绘与扩充(Upscale&Vary&remix&Zoom)", "link": "https://www.bilibili.com/video/BV1PmsUeYEpY/" },
-        { "text": "【Midjourney进阶】预设提示词&自定义提示词模板&Permutation提示词机制", "link": "https://www.bilibili.com/video/BV1PmsUeYEx4/" },
-        { "text": "【Midjourney进阶】图像融合(blend)", "link": "https://www.bilibili.com/video/BV1WmsUeYEdw/" },
-        { "text": "【Midjourney进阶】风格调节(Style Tuner)", "link": "https://www.bilibili.com/video/BV1CmsUeaEXY/" },
-        { "text": "【Midjourney进阶】其他指令详解", "link": "https://www.bilibili.com/video/BV1m6sUeTE8h/" }
+        { "text": "【Midjourney入门】 参数详解：Aspect Ratios(--ar)、Chaos(--c)、Image Weight(--iw)、Quality(--q)", "link": null },
+        { "text": "【Midjourney入门】 参数详解：No(--no)、Repeat(--r)、Seed(--seed)、Stop(--stop)", "link": null },
+        { "text": "【Midjourney入门】 参数详解：Style(--style)、Stylize(--stylize)、Weird(--w)、Character Reference(--cref)、Style Reference(--sref)", "link": null },
+        { "text": "【Midjourney入门】 参数详解：Tile(--tile)、Video(--video)、Personalization (--p)、Fast(--fast)、Relax(--relax)、Turbo(--turbo)", "link": null },
+        { "text": "【Midjourney进阶】获取&精简提示词(describe&shorten)", "link": null },
+        { "text": "【Midjourney进阶】Settings指令详细讲解", "link": null },
+        { "text": "【Midjourney进阶】图像局部重绘与扩充(Upscale&Vary&remix&Zoom)", "link": null },
+        { "text": "【Midjourney进阶】预设提示词&自定义提示词模板&Permutation提示词机制", "link": null },
+        { "text": "【Midjourney进阶】图像融合(blend)", "link": null },
+        { "text": "【Midjourney进阶】风格调节(Style Tuner)", "link": null },
+        { "text": "【Midjourney进阶】其他指令详解", "link": null },
+        { "text": "【Midjourney 综合实战】修改人物年龄 / 人物换脸", "link": "https://www.bilibili.com/video/BV1U6sUeTE5Y/" }
       ]
     },
     {
-      "title": "第三章【Midjourney 综合实战】",
-      "items": [
-        { "text": "修改人物年龄 / 人物换脸", "link": "https://www.bilibili.com/video/BV1U6sUeTE5Y/" },
-        { "text": "电商模特设计与换装", "link": null },
-        { "text": "室内设计/建筑设计", "link": null },
-        { "text": "Logo设计", "link": null },
-        { "text": "表情包设计", "link": null },
-        { "text": "卡通人物头像设计", "link": null },
-        { "text": "儿童绘本设计", "link": null },
-        { "text": "活动海报设计/婚礼海报设计", "link": null },
-        { "text": "盲盒人物IP设计/Q版人物设计", "link": null },
-        { "text": "萌宠设计/宠物时装设计", "link": null },
-        { "text": "蔬菜娃娃设计", "link": null },
-        { "text": "个人写真/儿童艺术照", "link": null }
-      ]
-    },
-    {
-      "title": "第四章【Stable Diffusion WebUI小白零基础入门进阶】",
+      "title": "【Stable Diffusion WebUI小白零基础入门进阶】",
       "items": [
         { "text": "【Stable Diffusion入门】 本地安装部署/云端部署/在线网站使用", "link": "https://www.bilibili.com/video/BV1tC23YKEBf/" },
         { "text": "【Stable Diffusion入门】 webui主界面设置与详解", "link": "https://www.bilibili.com/video/BV1cz22YdEUf/" },
@@ -70,112 +58,45 @@
         { "text": "【Stable Diffusion入门】 采样器、调度器、迭代步数、提示词引导系数", "link": "https://www.bilibili.com/video/BV1HRmKY7EU9/" },
         { "text": "【Stable Diffusion入门】 插件安装与推荐（Config-Presets、Aspect Ratio Helper、Inpaint Anything）", "link": "https://www.bilibili.com/video/BV1gKyAYkEUz/" },
         { "text": "【Stable Diffusion入门】 图生图全面实操详解、全网最细的实操讲解", "link": "https://www.bilibili.com/video/BV1kaC2YSEa3/" },
-        { "text": "【Stable Diffusion进阶】 ControlNet控制网络概念与安装方法", "link": "https://www.bilibili.com/video/BV187yaYoEQf/" },
-        { "text": "【Stable Diffusion进阶】 ControlNet界面参数详解", "link": "https://www.bilibili.com/video/BV1A6yiYtEvH/" },
-        { "text": "【Stable Diffusion进阶】 ControlNet图像特征控制", "link": "https://www.bilibili.com/video/BV1A6yiYtEYy/" },
-        { "text": "【Stable Diffusion进阶】 ControlNet结构与姿态控制", "link": "https://www.bilibili.com/video/BV14YyiYAEyG/" },
-        { "text": "【Stable Diffusion进阶】 ControlNet参考与修改控制", "link": "https://www.bilibili.com/video/BV1TYyiYAEoY/" },
-        { "text": "【Stable Diffusion进阶】 ControlNet适配器与其他特殊控制", "link": "https://www.bilibili.com/video/BV1TYyiYAEdg/" }
+        { "text": "【Stable Diffusion进阶】 ControlNet控制网络概念与安装方法", "link": null },
+        { "text": "【Stable Diffusion进阶】 ControlNet界面参数详解", "link": null },
+        { "text": "【Stable Diffusion进阶】 ControlNet图像特征控制", "link": null },
+        { "text": "【Stable Diffusion进阶】 ControlNet结构与姿态控制", "link": null },
+        { "text": "【Stable Diffusion进阶】 ControlNet参考与修改控制", "link": null },
+        { "text": "【Stable Diffusion进阶】 ControlNet适配器与其他特殊控制", "link": null }
       ]
     },
     {
-      "title": "第五章【Stable Diffusion WebUI实战】",
+      "title": "【AI商业变现赛道】",
       "items": [
-        { "text": "电商模特设计与换装", "link": null },
-        { "text": "签名、字体、logo、艺术二维码", "link": null },
-        { "text": "活动海报设计/婚礼海报设计", "link": null },
-        { "text": "电商产品图设计", "link": null },
-        { "text": "毛坯房转精装房制作", "link": null },
-        { "text": "真人摄影写真/儿童艺术照", "link": null },
-        { "text": "盲盒人物IP设计/Q版人物设计", "link": null },
-        { "text": "萌宠设计/宠物时装设计", "link": null },
-        { "text": "Deforum+Animatediff制作AI动画", "link": null }
-      ]
-    },
-    {
-      "title": "第六章【快速精通Stable Diffusion ComfyUI】",
-      "items": [
-        { "text": "【ComfyUI快速精通】ComfyUI 本地安装部署/云端部署/在线网站使用", "link": null },
-        { "text": "【ComfyUI快速精通】ComfyUI 操作界面详解", "link": null },
-        { "text": "【ComfyUI快速精通】ComfyUI 模型安装/插件安装", "link": null },
-        { "text": "【ComfyUI快速精通】ComfyUI 理解基础概念，新手轻松搭建文生图工作流", "link": null },
-        { "text": "【ComfyUI快速精通】ComfyUI 图生图完整工作流搭建", "link": null },
-        { "text": "【ComfyUI快速精通】ComfyUI 文生视频工作流搭建，只需简洁文本，创建动态AI短视频", "link": null },
-        { "text": "【ComfyUI快速精通】ComfyUI 图生视频工作流搭建，轻松上手制作AI视频", "link": null },
-        { "text": "【ComfyUI快速精通】ComfyUI 视频转绘工作流搭建，效果惊艳", "link": null },
-        { "text": "【ComfyUI快速精通】FLUX 全生态讲解，文生图、图生图、局部重绘、工作流搭建", "link": null }
-      ]
-    },
-    {
-      "title": "第七章【Stable Diffusion ComfyUI 实战】",
-      "items": [
-        { "text": "ComfyUI 实用工作流分享", "link": null }
-      ]
-    },
-    {
-      "title": "第八章【个人自媒体运营】",
-      "items": [
-        { "text": "开始前建议做的事", "link": null },
-        { "text": "如何找到自己的利基", "link": null },
-        { "text": "如何找到并分析对标账号", "link": null },
-        { "text": "如何持久高效的做选题", "link": null },
-        { "text": "怎么做吸引人的封面", "link": null }
-      ]
-    },
-    {
-      "title": "第九章【AI视频入门】",
-      "items": [
-        { "text": "AI视频提示词技巧", "link": "https://www.bilibili.com/video/BV1v1qtYiEcY/" },
-        { "text": "一口气入门AI视频", "link": "https://www.bilibili.com/video/BV1cYk4YsEvy/" },
-        { "text": "Sora保姆级教学", "link": null }
-      ]
-    },
-    {
-      "title": "第十章【AI自媒体视频实战篇】",
-      "items": [
-        { "text": "AI时装秀视频(动物/人物)", "link": "https://www.bilibili.com/video/BV1jWBqYiEUY/" },
-        { "text": "AI胖橘猫剧情号", "link": "https://www.bilibili.com/video/BV1LMUsYsE94/" },
-        { "text": "AI 时尚宠物", "link": "https://www.bilibili.com/video/BV1eEijeHEoZ/" },
-        { "text": "AI 治愈日记", "link": "https://www.bilibili.com/video/BV1b9iMexEy3/" },
-        { "text": "AI做动漫同人号", "link": "https://www.bilibili.com/video/BV1vkBeYdE23/" },
-        { "text": "AI 火柴人动画号", "link": "https://www.bilibili.com/video/BV1hGeEe7Eqd/" },
-        { "text": "AI 老照片复活", "link": "https://www.bilibili.com/video/BV1PDpSeaEPq/" },
-        { "text": "AI 人物跨时空对话", "link": "https://www.bilibili.com/video/BV1rhWne1E4s/" },
-        { "text": "AI 奇观视频", "link": "https://www.bilibili.com/video/BV1eWvGeBEHP/" },
-        { "text": "AI 神话故事号", "link": "https://www.bilibili.com/video/BV1e1WneKEUv/" }
-      ]
-    },
-    {
-      "title": "第十一章【AI短片导演课】",
-      "items": [
-        { "text": "关于剧本的基本认知", "link": null },
-        { "text": "如何用AI 创作剧本", "link": null },
-        { "text": "如何制作分镜图片", "link": null },
-        { "text": "如何制作分镜视频", "link": null },
-        { "text": "剪辑与配乐技巧", "link": null }
+        { "text": "AI内容创作商业模式分析", "link": null },
+        { "text": "AI视觉设计变现方案", "link": null },
+        { "text": "AI智能体开发与部署", "link": null },
+        { "text": "AI工具链组合应用案例", "link": null },
+        { "text": "AI商业项目实战演练", "link": null }
       ]
     }
   ],
   "teachingAdvantages": [
     {
-      "title": "1对1教学辅导",
+      "title": "知识星球专属资源",
       "items": [
-        "暂不再提供1对1教学辅导或陪跑训练营！如需学习，可详细观看公开课程",
-        "如有学习疑问，可联系，在空闲时间会进行解答",
-        "AI编程学习社群进行中，有兴趣可以加入"
+        "所有AI学习资料、工具与教程均在知识星球提供",
+        "加入知识星球即可获取完整课程内容与实战案例",
+        "星球成员可优先获取最新AI工具与应用资源"
       ]
     },
     {
-      "title": "陪跑训练营",
+      "title": "学习社群支持",
       "items": [
-        "暂不再提供1对1教学辅导或陪跑训练营！如需学习，可详细观看公开课程",
-        "如有学习疑问，可联系，在空闲时间会进行解答",
-        "AI编程学习社群进行中，有兴趣可以加入"
+        "知识星球内设有专属学习社群",
+        "定期分享AI最新动态与应用技巧",
+        "问题解答与项目指导均在星球内进行"
       ]
     }
   ],
   "cta": {
-    "link": "https://t.zsxq.com/QJabH",
-    "text": "开始学习"
+    "link": "https://t.zsxq.com/qyV6h",
+    "text": "加入社群"
   }
 } 

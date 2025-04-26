@@ -6,11 +6,11 @@ import Image from 'next/image'
 
 const navItems = [
   { label: '首页', href: '/' },
-  { label: 'AI商业落地', href: '/business' },
+  { label: 'AI风向智创', href: '/business' },
   { label: 'AI编程', href: '/code' },
   { label: '科虎AI工具箱', href: '/tools' },
-  { label: '我开发的应用', href: '/apps' },
-  { label: '资料分享', href: '/resources' },
+  { label: '科虎AI应用', href: '/apps' },
+  // { label: '资料分享', href: '/resources' },
   { label: '关于科虎AI', href: '/about' },
 ]
 

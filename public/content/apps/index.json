@@ -5,13 +5,22 @@
   },
   "apps": [
     {
+      "title": "科虎AI创影",
+      "desc": "基于AI技术的视频自动生成与剪辑工具",
+      "image": "/images/apps/ai_video.png",
+      "link": "/apps/ai_video",
+      "github": "https://app.aitiger.cc/source-codes/5/",
+      "tags": ["AI", "视频", "创影"],
+      "status": "online"
+    },
+    {
       "title": "小蜜蜂全自动智能助手",
       "desc": "全自动操作，自动发帖、回复、点赞、关注、AI笔记管理、小红书爬虫",
       "image": "/images/apps/bee.png",
       "link": "/apps/bee",
       "github": "https://app.aitiger.cc/source-codes/4/",
       "tags": ["全自动", "AI", "小蜜蜂"],
-      "status": "online"
+      "status": "offline"
     },
     {
       "title": "公众号语录图文智能助手",
@@ -20,7 +29,7 @@
       "link": "/apps/wechat",
       "github": "https://app.aitiger.cc/source-codes/3/",
       "tags": ["全自动", "AI", "公众号"],
-      "status": "online"
+      "status": "offline"
     },
     {
       "title": "AI双色球预测",
