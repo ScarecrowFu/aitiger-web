@@ -11,6 +11,14 @@
   ],
   "updateLogs": [
     {
+      "date": "2025-05-03",
+      "title": "AI视频全自动剪辑！用cursor打造全自动AI视频剪辑工具",
+      "tools": [
+        { "name": "windows版", "link": "http://app.aitiger.cc/static/versions/ai_video/科虎AI创影.zip" },
+        { "name": "mac版", "link": "https://app.aitiger.cc/static/versions/ai_video/科虎AI创影-mac.zip" }
+      ]
+    },
+    {
       "date": "2025-04-21",
       "title": "扣子空间实测，一句话完成所有工作",
       "tools": [
