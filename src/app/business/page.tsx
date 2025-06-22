@@ -152,7 +152,7 @@ export default function BusinessPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mt-20 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
         >
-          <h2 className="text-2xl font-bold mb-6 text-center">该课程永久公开发布，未完成部分将逐步更新</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">加入AI风向智创社，获取完整课程内容与实战案例</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {content.teachingAdvantages.map((section, idx) => (
               <div key={idx}>

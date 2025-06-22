@@ -11,6 +11,42 @@
   ],
   "updateLogs": [
     {
+      "date": "2025-05-03",
+      "title": "AI视频全自动剪辑！用cursor打造全自动AI视频剪辑工具",
+      "tools": [
+        { "name": "windows版", "link": "http://app.aitiger.cc/static/versions/ai_video/科虎AI创影.zip" },
+        { "name": "mac版", "link": "https://app.aitiger.cc/static/versions/ai_video/科虎AI创影-mac.zip" }
+      ]
+    },
+    {
+      "date": "2025-04-21",
+      "title": "扣子空间实测，一句话完成所有工作",
+      "tools": [
+        { "name": "Coze", "link": "https://www.coze.cn/space-preview" }
+      ]
+    },
+    {
+      "date": "2025-04-19",
+      "title": "堪比Manus ？带你快速体验扣子空间AI Agent！",
+      "tools": [
+        { "name": "Coze", "link": "https://www.coze.cn/space-preview" }
+      ]
+    },
+    {
+      "date": "2025-02-21",
+      "title": "全网首发！一网打尽DeepSeek全平台使用渠道",
+      "tools": [
+        { "name": "DeepSeek", "link": "https://deepseek.com/" }
+      ]
+    },
+    {
+      "date": "2025-02-04",
+      "title": "DeepSeek秘籍：解锁八大高效提问技巧",
+      "tools": [
+        { "name": "DeepSeek", "link": "https://deepseek.com/" }
+      ]
+    },
+    {
       "date": "2025-01-24",
       "title": "Cursor AI实战，打造小蜜蜂智能助手第四期",
       "tools": [
