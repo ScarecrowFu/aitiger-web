@@ -1,188 +1,233 @@
 "use client";
 
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { AppsContent } from '@/types/apps';
 
+// 动画配置
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-50px" },
+  transition: { duration: 0.6 }
+};
+
+// 已下线产品数据
+const offlineApps = [
+  {
+    title: "科虎AI创影",
+    desc: "基于AI技术的视频自动生成与剪辑工具",
+    image: "/images/apps/ai_video.png",
+    github: "https://pan.baidu.com/s/16yqOap0w0tKx8Pz3gTixwg?pwd=kqyy",
+    tags: ["AI", "视频", "创影"],
+    color: "neon-blue",
+  },
+  {
+    title: "小蜜蜂全自动智能助手",
+    desc: "全自动操作，自动发帖、回复、点赞、关注、AI笔记管理、小红书爬虫",
+    image: "/images/apps/bee.png",
+    github: "https://pan.baidu.com/s/1u8-DG3lF3oEdqB02EAtSFQ?pwd=p9a1",
+    tags: ["全自动", "AI", "小蜜蜂"],
+    color: "neon-yellow",
+  },
+  {
+    title: "公众号语录图文智能助手",
+    desc: "自动化生成与发布微信公众号图文，AI生成图文、AI生成内容、AI生成配图",
+    image: "/images/apps/wechat1.png",
+    github: "https://pan.baidu.com/s/1dkF1yixcslMAv86UEHSaMw?pwd=b7np",
+    tags: ["全自动", "AI", "公众号"],
+    color: "neon-green",
+  },
+  {
+    title: "AI双色球预测",
+    desc: "基于机器学习的双色球预测系统，集成数据分析和AI模型预测的彩票预测工具",
+    image: "/images/apps/lottery.png",
+    github: "https://pan.baidu.com/s/130SWa364w-vJFm_ZNi-sBQ?pwd=w6kp",
+    tags: ["Python", "机器学习", "数据分析"],
+    color: "neon-purple",
+  },
+  {
+    title: "OKX交易机器人",
+    desc: "智能加密货币交易系统，支持多策略自动化交易",
+    image: "/images/apps/trading.png",
+    github: "https://pan.baidu.com/s/12syh05hUUKA4729snz4nBQ?pwd=nk6h",
+    tags: ["Python", "量化交易", "加密货币"],
+    color: "neon-orange",
+  }
+];
+
+// 在线产品占位数据
+const onlineApps = [
+  { title: "敬请期待", desc: "新产品正在开发中...", icon: "🚀" },
+  { title: "敬请期待", desc: "新产品正在开发中...", icon: "✨" },
+  { title: "敬请期待", desc: "新产品正在开发中...", icon: "🎯" },
+];
 
 export default function AppsPage() {
-  const [content, setContent] = useState<AppsContent | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('/content/apps/index.json')
-      .then(res => res.json())
-      .then(data => {
-        setContent(data);
-        setIsLoading(false);
-      })
-      .catch(err => {
-        console.error('Error loading content:', err);
-        setIsLoading(false);
-      });
-  }, []);
-
-  if (isLoading || !content) {
-    return <div className="min-h-screen flex items-center justify-center">
-      <div className="text-xl">Loading...</div>
-    </div>;
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50/50 to-white">
-      <div className="max-w-[85%] mx-auto py-32 px-6">
+    <div className="min-h-screen bg-dark relative">
+      {/* 背景装饰 */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-[128px]" />
+        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-neon-blue/10 rounded-full blur-[128px]" />
+        <div className="absolute inset-0 grid-bg opacity-20" />
+      </div>
+
+      <div className="max-w-[90%] mx-auto py-28 px-6 relative">
         {/* 页面标题 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20 relative"
+          className="text-center mb-16"
         >
-          {/* SVG 背景装饰 */}
-          {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[800px] h-[200px]">
-            <svg
-              viewBox="0 0 800 200"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
-            >
-              <circle cx="50" cy="100" r="4" fill="#3B82F6" fillOpacity="0.3" />
-              <circle cx="750" cy="100" r="4" fill="#8B5CF6" fillOpacity="0.3" />
-              <path
-                d="M100 20H700C750 20 780 50 780 100C780 150 750 180 700 180H100C50 180 20 150 20 100C20 50 50 20 100 20Z"
-                fill="url(#paint0_linear)"
-                fillOpacity="0.1"
-              />
-              <path
-                d="M100 40H700C730 40 760 60 760 100C760 140 730 160 700 160H100C70 160 40 140 40 100C40 60 70 40 100 40Z"
-                stroke="url(#paint1_linear)"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear"
-                  x1="20"
-                  y1="100"
-                  x2="780"
-                  y2="100"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#3B82F6" />
-                  <stop offset="1" stopColor="#8B5CF6" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear"
-                  x1="40"
-                  y1="100"
-                  x2="760"
-                  y2="100"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#3B82F6" />
-                  <stop offset="1" stopColor="#8B5CF6" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div> */}
-
-          <h1 className="text-4xl font-bold mb-6 relative">{content.hero.title}</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto relative">
-            {content.hero.description}
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan bg-clip-text text-transparent">
+              我开发的应用
+            </span>
+          </h1>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            使用AI技术开发的实用工具和应用
           </p>
         </motion.div>
 
-        {/* 应用列表 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {content.apps.map((app, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
-            >
-              {/* 应用图片 */}
-              <div className="relative h-48 w-full">
-                <Image
-                  src={app.image}
-                  alt={app.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 rounded-full text-sm ${
-                    app.status === 'online' 
-                      ? 'bg-green-100 text-green-600'
-                      : app.status === 'development'
-                        ? 'bg-yellow-100 text-yellow-600'
-                        : 'bg-red-100 text-red-600'
-                  }`}>
-                    {app.status === 'online' 
-                      ? '已上线' 
-                      : app.status === 'development'
-                        ? '开发中'
-                        : '已下线'}
-                  </span>
-                </div>
-              </div>
+        {/* ===== 在线产品 ===== */}
+        <motion.section {...fadeInUp} className="mb-20">
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
+            <span className="w-1.5 h-8 bg-gradient-to-b from-neon-green to-neon-cyan rounded-full" />
+            <span className="text-white">在线产品</span>
+            <span className="text-xs px-2 py-1 rounded-full bg-neon-green/20 text-neon-green border border-neon-green/30">
+              Coming Soon
+            </span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {onlineApps.map((app, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group glass-card overflow-hidden border-2 border-dashed border-white/10 hover:border-neon-cyan/30 transition-all duration-300"
+              >
+                {/* 占位图区域 */}
+                <div className="relative h-48 w-full bg-gradient-to-br from-dark-100 to-dark-200 flex items-center justify-center overflow-hidden">
+                  {/* 动态网格背景 */}
+                  <div className="absolute inset-0 grid-bg opacity-30" />
 
-              {/* 应用信息 */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{app.title}</h3>
-                <p className="text-gray-600 mb-4">{app.desc}</p>
-                
-                {/* 技术标签 */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {app.tags.map((tag, tagIdx) => (
-                    <span
-                      key={tagIdx}
-                      className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full"
-                    >
-                      {tag}
+                  {/* 脉冲光环效果 */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-32 h-32 rounded-full bg-neon-cyan/5 animate-ping" />
+                  </div>
+
+                  <div className="relative text-center z-10">
+                    <span className="text-5xl block mb-3 group-hover:scale-110 transition-transform duration-300">{app.icon}</span>
+                    <span className="px-3 py-1 rounded-full text-sm bg-neon-yellow/20 text-neon-yellow border border-neon-yellow/30">
+                      待上线
                     </span>
-                  ))}
+                  </div>
                 </div>
 
-                {/* 操作按钮 */}
-                <div className="flex items-center gap-4">
-                  <Link
-                    href={app.link}
-                    target="_blank"
-                    className="flex-1 text-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                  >
-                    访问应用
-                  </Link>
-                  {app.github && (
-                    <Link
-                      href={app.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                      源码
-                    </Link>
-                  )}
+                {/* 信息 */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-gray-400">{app.title}</h3>
+                  <p className="text-gray-500 text-sm">{app.desc}</p>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* ===== 已下线产品 ===== */}
+        <motion.section {...fadeInUp} className="mb-16">
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
+            <span className="w-1.5 h-8 bg-gradient-to-b from-neon-orange to-neon-pink rounded-full" />
+            <span className="text-white">已下线产品</span>
+            <span className="text-xs px-2 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10">
+              源码可用
+            </span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            {offlineApps.map((app, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="group glass-card overflow-hidden hover:bg-white/5 transition-all duration-300"
+              >
+                {/* 应用图片 */}
+                <div className="relative h-36 w-full overflow-hidden">
+                  <Image
+                    src={app.image}
+                    alt={app.title}
+                    fill
+                    className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+                  {/* 渐变遮罩 */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
+
+                  {/* 状态标签 */}
+                  <div className="absolute top-3 right-3">
+                    <span className="px-2 py-1 rounded-full text-xs bg-dark/80 text-gray-400 border border-white/10 backdrop-blur-sm">
+                      已下线
+                    </span>
+                  </div>
+                </div>
+
+                {/* 应用信息 */}
+                <div className="p-4">
+                  <h3 className="text-base font-bold mb-2 text-white truncate group-hover:text-neon-blue transition-colors">
+                    {app.title}
+                  </h3>
+                  <p className="text-gray-500 text-xs mb-3 line-clamp-2 leading-relaxed">{app.desc}</p>
+
+                  {/* 技术标签 */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {app.tags.map((tag, tagIdx) => (
+                      <span
+                        key={tagIdx}
+                        className={`px-2 py-0.5 text-[10px] rounded-full bg-${app.color}/10 text-${app.color} border border-${app.color}/20`}
+                        style={{
+                          backgroundColor: `rgba(var(--${app.color}-rgb, 0, 212, 255), 0.1)`,
+                          borderColor: `rgba(var(--${app.color}-rgb, 0, 212, 255), 0.2)`,
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* 源码按钮 */}
+                  <Link
+                    href={app.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center px-3 py-2 text-xs bg-white/5 border border-white/10 rounded-lg hover:bg-neon-blue/10 hover:border-neon-blue/30 hover:text-neon-blue transition-all duration-300 text-gray-400"
+                  >
+                    获取源码
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
         {/* 更多应用提示 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mt-16"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center pt-8 border-t border-white/10"
         >
-          <p className="text-gray-600 mb-8">{content.more.text}</p>
+          <p className="text-gray-500 mb-8">更多有趣的应用正在开发中，敬请期待...</p>
           <Link
-            href={content.more.cta.link}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg hover:shadow-xl"
+            href="/code"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple text-white rounded-full hover:shadow-neon-blue transition-all duration-300 font-medium"
           >
-            <span className="text-lg">{content.more.cta.text}</span>
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <span className="text-lg">学习如何开发</span>
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
@@ -190,4 +235,4 @@ export default function AppsPage() {
       </div>
     </div>
   );
-} 
+}

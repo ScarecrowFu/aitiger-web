@@ -1,530 +1,263 @@
 "use client";
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaWeixin, FaEnvelope } from 'react-icons/fa';
-import { IoNewspaper } from 'react-icons/io5';
-import { HeroBackground } from '@/components/hero-background';
-import type { HomeContent } from '@/types/home';
+import { motion } from 'framer-motion';
+import ParticleBackground from '@/components/particle-background';
+
+// 五大课程体系
+const courses = [
+  { title: 'AI编程', desc: 'Cursor 从入门到项目落地', icon: '💻', color: 'neon-blue', gradient: 'from-blue-500 to-cyan-500' },
+  { title: 'ChatGPT', desc: 'Prompt技巧 · GPTs开发 · 15种实用技巧', icon: '🤖', color: 'neon-purple', gradient: 'from-purple-500 to-pink-500' },
+  { title: 'Midjourney', desc: '参数详解 · 风格定制 · 实战出图', icon: '🎨', color: 'neon-orange', gradient: 'from-orange-500 to-red-500' },
+  { title: 'Stable Diffusion', desc: 'ControlNet · 模型调校 · 插件开发', icon: '🖼️', color: 'neon-pink', gradient: 'from-pink-500 to-rose-500' },
+  { title: 'AI创收实战分享', desc: '全栈开发 · 自媒体矩阵 · 商业变现', icon: '💰', color: 'neon-green', gradient: 'from-green-500 to-emerald-500' },
+];
+
+// 平台亮点
+const highlights = [
+  { title: '不局限工具', desc: '覆盖主流AI工具，围绕真实场景教学', icon: '🔧' },
+  { title: '从零到落地', desc: '系统化课程体系，零基础也能独立完成项目', icon: '🎯' },
+  { title: '图文+视频', desc: '双教程模式，配合资料库与 Q&A 指南', icon: '📚' },
+  { title: '永久开放', desc: '所有课程永久可学，自主掌握学习节奏', icon: '♾️' },
+  { title: 'AI创收实战', desc: '全栈开发上架、自媒体矩阵、自动化变现', icon: '💰' },
+  { title: '社群共学', desc: '问题精准解答，共享提示词库与效率插件', icon: '🤝' },
+];
+
+// 站内导航
+const navCards = [
+  { title: 'AI社群', desc: '查看完整课程体系与社群内容', href: '/code', icon: '📖', color: 'from-blue-500 to-cyan-500' },
+  { title: '科虎AI应用', desc: '浏览我们开发的AI应用与源码', href: '/apps', icon: '⚡', color: 'from-purple-500 to-pink-500' },
+  { title: '关于科虎AI', desc: '了解我们的理念与联系方式', href: '/about', icon: '💡', color: 'from-cyan-500 to-blue-500' },
+];
 
 // 动画配置
-const animations = {
-  fadeInUp: {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  },
-  fadeIn: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    transition: { duration: 0.5 }
-  },
-  slideIn: {
-    initial: { opacity: 0, x: -20 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.5 }
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1
+    }
   }
 };
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
 export default function Home() {
-  const [content, setContent] = useState<HomeContent | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadContent = async () => {
-      try {
-        const responses = await Promise.all([
-          fetch('/content/home/hero.json'),
-          fetch('/content/home/courses.json'),
-          fetch('/content/home/programming.json'),
-          fetch('/content/home/tools.json'),
-          fetch('/content/home/apps.json'),
-          fetch('/content/home/resources.json'),
-          fetch('/content/home/about.json')
-        ]);
-
-        // 检查是否所有请求都成功
-        responses.forEach((res, index) => {
-          if (!res.ok) {
-            throw new Error(`Failed to load content ${index + 1}: ${res.statusText}`);
-          }
-        });
-
-        // 分别解析每个响应，以便定位具体哪个文件出错
-        const contents = await Promise.all(
-          responses.map(async (res, index) => {
-            try {
-              const text = await res.text();
-              try {
-                return JSON.parse(text);
-              } catch (parseError: unknown) {
-                console.error(`JSON parse error in file ${index + 1}:`, text);
-                throw new Error(`Invalid JSON in file ${index + 1}: ${parseError instanceof Error ? parseError.message : 'Unknown error'}`);
-              }
-            } catch (error) {
-              console.error(`Error processing file ${index + 1}:`, error);
-              throw error;
-            }
-          })
-        );
-
-        const [hero, courses, programming, tools, apps, resources, about] = contents;
-        setContent({ hero, courses, programming, tools, apps, resources, about });
-      } catch (err) {
-        console.error('Error loading content:', err);
-        setError(err instanceof Error ? err.message : 'Failed to load content');
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadContent();
-  }, []);
-
-  if (error) {
-    return <div className="min-h-screen flex items-center justify-center">
-      <div className="text-red-500">Error: {error}</div>
-    </div>;
-  }
-
-  if (isLoading || !content) {
-    return <div className="min-h-screen flex items-center justify-center">
-      <div className="text-xl">Loading...</div>
-    </div>;
-  }
-
   return (
-    <AnimatePresence>
-      <div className="min-h-screen overflow-hidden">
-        <div className="relative">
-          {/* Hero Section */}
-          <div className="relative pt-16 pb-12 lg:pt-20 lg:pb-16">
-            <HeroBackground />
-            <motion.div
-              initial={animations.fadeInUp.initial}
-              animate={animations.fadeInUp.animate}
-              transition={animations.fadeInUp.transition}
-              className="container mx-auto px-4 text-center"
-            >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
-                {content.hero.title}
-              </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-                {content.hero.description}
-              </p>
-              
-              {/* 特性列表 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-5xl mx-auto">
-                {content.hero.features.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={animations.slideIn.initial}
-                    animate={animations.slideIn.animate}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-3 p-4 bg-white/80 backdrop-blur-sm rounded-xl hover:bg-white/90 transition-all shadow-sm hover:shadow-md group"
-                  >
-                    <span className="text-2xl lg:text-3xl group-hover:scale-110 transition-transform duration-300">{feature.icon}</span>
-                    <span className="text-sm lg:text-base text-gray-700 text-left flex-1">{feature.text}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+    <div className="min-h-screen bg-dark relative overflow-hidden">
+      {/* 粒子背景 */}
+      <ParticleBackground />
 
-          {/* AI商业落地区块 */}
-          <div id="tools" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-50/80 to-white/50 backdrop-blur-sm -z-20" />
-            <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-5 -z-10" />
-            <div className="max-w-[85%] mx-auto px-6 relative">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-20"
-              >
-                <h2 className="text-4xl font-bold mb-6">{content.courses.title}</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  {content.courses.description}
-                </p>
-              </motion.div>
+      {/* 背景装饰 */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* 顶部光晕 */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neon-blue/20 rounded-full blur-[128px]" />
+        <div className="absolute top-20 right-1/4 w-80 h-80 bg-neon-purple/20 rounded-full blur-[128px]" />
+        {/* 网格背景 */}
+        <div className="absolute inset-0 grid-bg opacity-30" />
+      </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                {content.courses.courses.map((course, idx) => (
-                  <motion.div
-                    key={course.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="group bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 relative z-10"
-                  >
-                    <div className="flex items-center gap-3 mb-6">
-                      <span className="text-3xl group-hover:scale-110 transition-transform">
-                        {course.icon}
-                      </span>
-                      <h3 className="text-xl font-bold">{course.title}</h3>
-                    </div>
-                    <ul className="space-y-3">
-                      {course.items.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2 text-gray-600">
-                          <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* 查看完整课程按钮 */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="text-center mt-12"
-              >
-                <Link
-                  href="/business"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg hover:shadow-xl"
-                >
-                  <span className="text-lg">{content.courses.checkDetail}</span>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* AI编程区块 */}
-          <div id="programming" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-green-50/80 to-white/50 backdrop-blur-sm -z-20" />
-            <div className="absolute inset-0 bg-[url('/patterns/code.svg')] opacity-5 -z-10" />
-            <div className="max-w-[85%] mx-auto px-6 relative z-10">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-20"
-              >
-                <h2 className="text-4xl font-bold mb-6">{content.programming.title}</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  {content.programming.description}
-                </p>
-              </motion.div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                {content.programming.courses.map((course, idx) => (
-                  <motion.div
-                    key={course.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="group bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300"
-                  >
-                    <div className="flex items-center gap-3 mb-6">
-                      <span className="text-3xl group-hover:scale-110 transition-transform">
-                        {course.icon}
-                      </span>
-                      <h3 className="text-xl font-bold">{course.title}</h3>
-                    </div>
-                    <ul className="space-y-3">
-                      {course.items.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2 text-gray-600">
-                          <span className="w-1.5 h-1.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* 查看详情按钮 */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="text-center mt-12"
-              >
-                <Link
-                  href="/code"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full hover:from-green-600 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl"
-                >
-                  <span className="text-lg">{content.programming.checkDetail}</span>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-
-
-          {/* 工工具箱区块 */}
-          <div id="tools" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-50/80 to-white/50 backdrop-blur-sm -z-20" />
-            <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-5 -z-10" />
-            <div className="max-w-[85%] mx-auto px-6 relative">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-20"
-              >
-                <h2 className="text-4xl font-bold mb-6">{content.tools.title}</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  {content.tools.description}
-                </p>
-              </motion.div>
-
-              {/* 工具箱预览 */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-                {content.tools.preview.map((item, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="group bg-white/90 backdrop-blur-sm rounded-2xl p-12 shadow-sm hover:shadow-xl transition-all duration-300"
-                  >
-                    <span className="text-5xl mb-8 block group-hover:scale-110 transition-transform">
-                      {item.icon}
-                    </span>
-                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-lg text-gray-600">{item.desc}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* 查看更多按钮 */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="text-center mt-12 relative z-10"
-              >
-                <Link
-                  href="/tools"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl"
-                >
-                  <span className="text-lg">{content.tools.checkDetail}</span>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* 应用展示区块 */}
-          <div id="apps" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-50/80 to-white/50 backdrop-blur-sm -z-20" />
-            <div className="absolute inset-0 bg-[url('/patterns/apps.svg')] opacity-5 -z-10" />
-            <div className="max-w-[85%] mx-auto px-6 relative z-10">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center mb-20"
-              >
-                <h2 className="text-4xl font-bold mb-6">{content.apps.title}</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  {content.apps.description}
-                </p>
-              </motion.div>
-
-              {/* 应用预览卡片 */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                {content.apps.apps.map((app, index) => (
-                  <motion.div
-                    key={app.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
-                  >
-                    <div className="relative h-48 w-full overflow-hidden">
-                      <Image
-                        src={app.image}
-                        alt={app.title}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-2xl">
-                        {app.icon}
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2">{app.title}</h3>
-                      <p className="text-gray-600">{app.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* 查看更多按钮 */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <Link
-                  href="/apps"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full hover:from-blue-600 hover:to-indigo-600 transition-all shadow-lg hover:shadow-xl"
-                >
-                  <span className="text-lg">{content.apps.checkDetail}</span>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* 资料分享区块 */}
-          <div id="resources" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-50/80 to-white/50 backdrop-blur-sm -z-20" />
-            <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-5 -z-10" />
-            <div className="max-w-[85%] mx-auto px-6 relative">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-center mb-20"
-              >
-                <h2 className="text-4xl font-bold mb-6">{content.resources.title}</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  {content.resources.description}
-                </p>
-              </motion.div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {content.resources.sections.map((section, idx) => (
-                  <motion.div
-                    key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="group bg-white/90 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-300"
-                  >
-                    <div className="flex items-center gap-3 mb-6">
-                      <span className="text-4xl group-hover:scale-110 transition-transform">{section.icon}</span>
-                      <h3 className="text-2xl font-bold">{section.title}</h3>
-                    </div>
-                    <ul className="space-y-4">
-                      {section.items.map((item, index) => (
-                        <li key={index} className="flex items-center gap-3">
-                          <span className="w-1.5 h-1.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full" />
-                          <span className="text-gray-600">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* 资料特 */}
-              <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {content.resources.features.map((item, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="bg-white/60 backdrop-blur-sm rounded-xl p-6 text-center"
-                  >
-                    <span className="text-3xl mb-3 inline-block">{item.icon}</span>
-                    <p className="text-gray-600">{item.text}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* 查看更多按钮 */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <Link
-                  href="/resources"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full hover:from-orange-600 hover:to-red-600 transition-all shadow-lg hover:shadow-xl"
-                >
-                  <span className="text-lg">{content.resources.checkDetail}</span>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </motion.div>
-
-            </div>
-          </div>
-
-          {/* 关于我们区块 */}
-          <div id="about" className="py-32 relative mt-20 rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-green-50/80 to-white/50 backdrop-blur-sm -z-10" />
-            <div className="absolute inset-0 bg-[url('/patterns/circuit.svg')] opacity-5" />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-[85%] mx-auto text-center px-6"
-            >
-              <h2 className="text-4xl font-bold mb-8">{content.about.title}</h2>
-              <p className="text-xl text-gray-600 mb-16 leading-relaxed max-w-4xl mx-auto">
-                {content.about.description}
-              </p>
-              <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
-                {content.about.contactInfo.map((item) => (
-                  <motion.div
-                    key={item.label}
-                    whileHover={{ scale: 1.05 }}
-                    className="flex items-center gap-4 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-sm"
-                  >
-                    {item.type === 'wechat' && <FaWeixin className="w-10 h-10 text-blue-500" />}
-                    {item.type === 'mp' && <IoNewspaper className="w-10 h-10 text-blue-500" />}
-                    {item.type === 'email' && <FaEnvelope className="w-10 h-10 text-blue-500" />}
-                    <div className="text-left">
-                      <div className="text-sm text-gray-500">{item.label}</div>
-                      <div className="font-medium text-lg">{item.value}</div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
-          
-          {/* 底部标语 */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center py-20"
+      {/* Hero */}
+      <section className="relative pt-32 pb-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold mb-6"
           >
-            <p className="text-xl text-gray-600 mb-4">
-              {content.about.footer.slogan.main}
-            </p>
-            <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              {content.about.footer.slogan.sub}
-            </p>
+            <span className="bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+              科虎AI
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-xl md:text-2xl text-gray-300 mb-4"
+          >
+            不局限工具 · 聚焦实战场景 · 能力提升指南
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-base text-gray-400 max-w-2xl mx-auto mb-10"
+          >
+            专注AI技术在真实场景的应用，手把手教你用AI提升效率、开发产品、实现变现
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            <Link
+              href="/code"
+              className="group relative px-8 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white rounded-full font-medium transition-all duration-300 hover:shadow-neon-blue overflow-hidden"
+            >
+              <span className="relative z-10">查看课程内容</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-neon-purple to-neon-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Link>
+            <Link
+              href="/apps"
+              className="px-8 py-3 bg-white/5 text-gray-200 rounded-full border border-white/20 hover:bg-white/10 hover:border-neon-blue/50 transition-all duration-300 font-medium"
+            >
+              浏览AI应用
+            </Link>
           </motion.div>
         </div>
-      </div>
-    </AnimatePresence>
+      </section>
+
+      {/* 四大课程体系 */}
+      <section className="relative py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-2xl md:text-3xl font-bold text-center mb-12 text-white"
+          >
+            五大课程体系
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5"
+          >
+            {courses.map((course) => (
+              <motion.div
+                key={course.title}
+                variants={itemVariants}
+                className="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 overflow-hidden"
+              >
+                {/* 左侧渐变发光条 */}
+                <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${course.gradient} group-hover:w-1.5 transition-all group-hover:shadow-lg`} />
+
+                {/* 悬停时的光效 */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${course.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+
+                <span className="text-4xl block mb-4">{course.icon}</span>
+                <h3 className="text-lg font-bold text-white mb-2">{course.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{course.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 平台亮点 */}
+      <section className="relative py-20 px-6">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
+        <div className="max-w-6xl mx-auto relative">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-2xl md:text-3xl font-bold text-center mb-12 text-white"
+          >
+            为什么选择科虎AI
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {highlights.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={itemVariants}
+                className="group flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-neon-blue/30 transition-all duration-300"
+              >
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-white mb-1 group-hover:text-neon-blue transition-colors">{item.title}</h3>
+                  <p className="text-sm text-gray-400">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 快速导航 */}
+      <section className="relative py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-2xl md:text-3xl font-bold text-center mb-12 text-white"
+          >
+            探索更多
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          >
+            {navCards.map((card) => (
+              <motion.div key={card.href} variants={itemVariants}>
+                <Link
+                  href={card.href}
+                  className="group block p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 relative overflow-hidden"
+                >
+                  {/* 悬停渐变背景 */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+
+                  <span className="text-4xl block mb-4 group-hover:scale-110 transition-transform duration-300">{card.icon}</span>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-neon-blue transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-gray-400">{card.desc}</p>
+
+                  {/* 箭头指示 */}
+                  <div className="absolute bottom-6 right-6 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                    <svg className="w-4 h-4 text-neon-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 底部标语 */}
+      <section className="relative pb-20 px-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center pt-8 border-t border-white/10 max-w-4xl mx-auto"
+        >
+          <p className="text-lg bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan bg-clip-text text-transparent font-medium">
+            与AI同行，探索无限可能
+          </p>
+        </motion.div>
+      </section>
+    </div>
   );
-} 
+}

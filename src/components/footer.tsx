@@ -1,44 +1,28 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-
-interface FooterContent {
-  copyright: {
-    text: string;
-    icp: {
-      text: string;
-      link: string;
-    };
-  };
-}
-
 export const Footer = () => {
-  const [content, setContent] = useState<FooterContent | null>(null);
-
-  useEffect(() => {
-    fetch('/content/site/footer.json')
-      .then(res => res.json())
-      .then(data => setContent(data))
-      .catch(err => console.error('Error loading footer content:', err));
-  }, []);
-
-  if (!content) return null;
-
   return (
-    <div className="border-t border-gray-100 py-8 mt-auto">
-      <div className="text-center text-gray-500 text-sm">
-        <p className="mb-2">{content.copyright.text}</p>
+    <footer className="relative border-t border-white/10 py-8 mt-auto bg-dark/50">
+      {/* 装饰光效 */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-neon-blue/50 to-transparent" />
+
+      <div className="text-center">
+        <p className="text-gray-400 text-sm mb-2">
+          Copyright © 2025-至今{' '}
+          <span className="text-gray-300">科虎智能信息</span>{' '}
+          版权所有
+        </p>
         <p>
-          <a 
-            href={content.copyright.icp.link}
-            target="_blank" 
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-700 transition-colors"
+            className="text-gray-500 hover:text-neon-blue transition-colors text-sm"
           >
-            {content.copyright.icp.text}
+            粤ICP备2024269283号-1
           </a>
         </p>
       </div>
-    </div>
+    </footer>
   );
-}; 
+};

@@ -16,7 +16,7 @@ export default function Carousel({ images, autoPlayInterval = 5000 }: CarouselPr
 
   useEffect(() => {
     if (!autoPlayInterval) return;
-    
+
     const interval = setInterval(() => {
       setCurrentIndex((current) => (current + 1) % images.length);
     }, autoPlayInterval);
@@ -81,4 +81,4 @@ export default function Carousel({ images, autoPlayInterval = 5000 }: CarouselPr
       </div>
     </div>
   );
-} 
+}
