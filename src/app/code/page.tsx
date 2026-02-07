@@ -103,32 +103,32 @@ const sdCourses = [
 // 课程列表项组件
 const CourseItem = ({ item, index, color }: { item: string; index: number; color: string }) => {
   const colorClasses: Record<string, { bg: string; text: string; border: string }> = {
-    blue: { bg: 'bg-neon-blue/10', text: 'text-neon-blue', border: 'border-neon-blue/20' },
-    green: { bg: 'bg-neon-green/10', text: 'text-neon-green', border: 'border-neon-green/20' },
-    orange: { bg: 'bg-neon-orange/10', text: 'text-neon-orange', border: 'border-neon-orange/20' },
-    pink: { bg: 'bg-neon-pink/10', text: 'text-neon-pink', border: 'border-neon-pink/20' },
-    purple: { bg: 'bg-neon-purple/10', text: 'text-neon-purple', border: 'border-neon-purple/20' },
+    blue: { bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' },
+    green: { bg: 'bg-green-50', text: 'text-green-600', border: 'border-green-200' },
+    orange: { bg: 'bg-orange-50', text: 'text-orange-600', border: 'border-orange-200' },
+    pink: { bg: 'bg-pink-50', text: 'text-pink-600', border: 'border-pink-200' },
+    purple: { bg: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-200' },
   };
   const cls = colorClasses[color] || colorClasses.blue;
 
   return (
-    <div className={`flex items-start gap-3 p-3 rounded-xl ${cls.bg} border ${cls.border} hover:bg-white/5 transition-all duration-300 group`}>
-      <span className={`flex-shrink-0 w-6 h-6 rounded-md ${cls.bg} ${cls.text} text-xs font-bold flex items-center justify-center border ${cls.border}`}>
+    <div className={`flex items-start gap-3 p-3 rounded-xl ${cls.bg} border ${cls.border} hover:shadow-sm transition-all duration-300 group`}>
+      <span className={`flex-shrink-0 w-6 h-6 rounded-md bg-white ${cls.text} text-xs font-bold flex items-center justify-center border ${cls.border} shadow-sm`}>
         {index + 1}
       </span>
-      <span className="text-sm text-gray-300 group-hover:text-white transition-colors">{item}</span>
+      <span className="text-sm text-gray-700 group-hover:text-gray-900 transition-colors">{item}</span>
     </div>
   );
 };
 
 export default function CodePage() {
   return (
-    <div className="min-h-screen bg-dark relative">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white relative">
       {/* 背景装饰 */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neon-blue/10 rounded-full blur-[128px]" />
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-neon-purple/10 rounded-full blur-[128px]" />
-        <div className="absolute inset-0 grid-bg opacity-20" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-[128px]" />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-[128px]" />
+        <div className="absolute inset-0 grid-bg opacity-30" />
       </div>
 
       <div className="max-w-6xl mx-auto px-6 py-28 relative">
@@ -139,22 +139,35 @@ export default function CodePage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
               AI社群
             </span>
           </h1>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             本社群不局限于使用哪些工具，均是基于实际场景，分享如何利用AI提升自己的能力，创造营收。
             <br />
             <span className="text-gray-500">社群已经有大量基础课程，有兴趣的可以先自行观看。</span>
           </p>
+          <a
+            href="https://t.zsxq.com/jYnSj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gradient mt-8"
+          >
+            <span className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+              </svg>
+              加入社群
+            </span>
+          </a>
         </motion.div>
 
         {/* 一. AI创收实战分享 */}
         <motion.section {...fadeInUp} className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
-            <span className="text-neon-blue neon-text-blue">一.</span>
-            <span className="text-white">AI创收实战分享</span>
+            <span className="text-purple-600">一.</span>
+            <span className="text-gray-900">AI创收实战分享</span>
           </h2>
           <div className="glass-card p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -168,42 +181,42 @@ export default function CodePage() {
         {/* 二. 基础课程 */}
         <motion.section {...fadeInUp} className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
-            <span className="text-neon-blue neon-text-blue">二.</span>
-            <span className="text-white">基础课程</span>
+            <span className="text-blue-600">二.</span>
+            <span className="text-gray-900">基础课程</span>
           </h2>
 
           <div className="space-y-8">
             {/* Cursor AI 编程 */}
-            <div className="glass-card p-8 border-l-2 border-neon-blue">
-              <h3 className="text-xl md:text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <div className="glass-card p-8 border-l-4 border-blue-500">
+              <h3 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
                 <span className="text-2xl">💻</span>
                 [Cursor AI 编程 * 从小白到项目落地]
               </h3>
 
-              {/* 新手快速入门图文教程 */}
+              {/* 视频课程目录大纲 */}
               <div className="mb-8">
-                <h4 className="text-lg font-semibold mb-4 text-neon-blue flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-neon-blue" />
-                  新手快速入门图文教程
+                <h4 className="text-lg font-semibold mb-4 text-purple-600 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-purple-500" />
+                  视频课程目录大纲
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {cursorTutorials.map((item, idx) => (
+                  {cursorVideos.map((item, idx) => (
                     <CourseItem key={idx} item={item} index={idx} color="blue" />
                   ))}
                 </div>
               </div>
 
-              {/* 视频课程目录大纲 */}
+              {/* 新手快速入门图文教程 */}
               <div>
-                <h4 className="text-lg font-semibold mb-4 text-neon-purple flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-neon-purple" />
-                  视频课程目录大纲
+                <h4 className="text-lg font-semibold mb-4 text-blue-600 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-500" />
+                  新手快速入门图文教程
                 </h4>
                 <div className="space-y-2">
-                  {cursorVideos.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors group">
-                      <span className="text-neon-purple text-sm mt-0.5">▸</span>
-                      <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">{item}</span>
+                  {cursorTutorials.map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors group">
+                      <span className="text-blue-500 text-sm mt-0.5">▸</span>
+                      <span className="text-sm text-gray-600 group-hover:text-gray-900 transition-colors">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -211,8 +224,8 @@ export default function CodePage() {
             </div>
 
             {/* ChatGPT课程 */}
-            <div className="glass-card p-8 border-l-2 border-neon-green">
-              <h3 className="text-xl md:text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <div className="glass-card p-8 border-l-4 border-green-500">
+              <h3 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
                 <span className="text-2xl">🤖</span>
                 [ChatGPT从零开始快速入门到精通]
               </h3>
@@ -224,8 +237,8 @@ export default function CodePage() {
             </div>
 
             {/* Midjourney课程 */}
-            <div className="glass-card p-8 border-l-2 border-neon-orange">
-              <h3 className="text-xl md:text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <div className="glass-card p-8 border-l-4 border-orange-500">
+              <h3 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
                 <span className="text-2xl">🎨</span>
                 [Midjourney小白零基础入门进阶]
               </h3>
@@ -237,8 +250,8 @@ export default function CodePage() {
             </div>
 
             {/* Stable Diffusion课程 */}
-            <div className="glass-card p-8 border-l-2 border-neon-pink">
-              <h3 className="text-xl md:text-2xl font-bold mb-6 text-white flex items-center gap-3">
+            <div className="glass-card p-8 border-l-4 border-pink-500">
+              <h3 className="text-xl md:text-2xl font-bold mb-6 text-gray-900 flex items-center gap-3">
                 <span className="text-2xl">🖼️</span>
                 [Stable Diffusion WebUI小白零基础入门进阶]
               </h3>
@@ -254,11 +267,11 @@ export default function CodePage() {
         {/* 三. 常见问题与指南 */}
         <motion.section {...fadeInUp} className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
-            <span className="text-neon-blue neon-text-blue">三.</span>
-            <span className="text-white">常见问题与指南</span>
+            <span className="text-blue-600">三.</span>
+            <span className="text-gray-900">常见问题与指南</span>
           </h2>
           <div className="glass-card p-8">
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed">
               会收集和整理大家在使用AI的过程中出现的问题和解决办法或者建议，还会有各种常见步骤的操作指南。
             </p>
           </div>
@@ -267,11 +280,11 @@ export default function CodePage() {
         {/* 四. 分享工具 */}
         <motion.section {...fadeInUp} className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
-            <span className="text-neon-blue neon-text-blue">四.</span>
-            <span className="text-white">分享工具</span>
+            <span className="text-blue-600">四.</span>
+            <span className="text-gray-900">分享工具</span>
           </h2>
           <div className="glass-card p-8">
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed">
               在这里会分享大家在学习时可能需要的一些文档资料或工具资源。
             </p>
           </div>
@@ -283,7 +296,7 @@ export default function CodePage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="text-center pt-8 border-t border-white/10"
+          className="text-center pt-8 border-t border-gray-200"
         >
           <p className="text-gray-500">
             更多课程内容持续更新中...

@@ -21,11 +21,11 @@ interface ParticleBackgroundProps {
 }
 
 export default function ParticleBackground({
-  particleCount = 80,
-  particleColor = 'rgba(0, 212, 255, 0.8)',
-  lineColor = 'rgba(0, 212, 255, 0.15)',
-  particleSpeed = 0.5,
-  connectionDistance = 150,
+  particleCount = 60,
+  particleColor = 'rgba(59, 130, 246, 0.6)',
+  lineColor = 'rgba(59, 130, 246, 0.1)',
+  particleSpeed = 0.3,
+  connectionDistance = 120,
   className = '',
 }: ParticleBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -36,10 +36,10 @@ export default function ParticleBackground({
   const initParticles = useCallback((width: number, height: number) => {
     const particles: Particle[] = [];
     const colors = [
-      'rgba(0, 212, 255, 0.8)',   // 霓虹蓝
-      'rgba(139, 92, 246, 0.8)',  // 霓虹紫
-      'rgba(244, 114, 182, 0.6)', // 霓虹粉
-      'rgba(6, 182, 212, 0.7)',   // 霓虹青
+      'rgba(59, 130, 246, 0.5)',   // 蓝色
+      'rgba(139, 92, 246, 0.5)',   // 紫色
+      'rgba(236, 72, 153, 0.4)',   // 粉色
+      'rgba(6, 182, 212, 0.5)',    // 青色
     ];
 
     for (let i = 0; i < particleCount; i++) {
@@ -86,7 +86,7 @@ export default function ParticleBackground({
           ctx.beginPath();
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 212, 255, ${opacity * 0.2})`;
+          ctx.strokeStyle = `rgba(59, 130, 246, ${opacity * 0.15})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -103,7 +103,7 @@ export default function ParticleBackground({
         ctx.beginPath();
         ctx.moveTo(particle.x, particle.y);
         ctx.lineTo(mouseRef.current.x, mouseRef.current.y);
-        ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.4})`;
+        ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.3})`;
         ctx.lineWidth = 0.8;
         ctx.stroke();
       }

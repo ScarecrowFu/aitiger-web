@@ -11,18 +11,28 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // 深色科技主题色
-        dark: {
-          DEFAULT: "#0a0a1a",
-          100: "#1a1a2e",
-          200: "#16213e",
-          300: "#0f3460",
+        // 浅色主题基础色
+        light: {
+          DEFAULT: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
         },
-        // 霓虹色系
-        neon: {
-          blue: "#00d4ff",
+        // 主题色系
+        primary: {
+          blue: "#3b82f6",
           purple: "#8b5cf6",
-          pink: "#f472b6",
+          pink: "#ec4899",
+          green: "#10b981",
+          orange: "#f97316",
+          yellow: "#fbbf24",
+          cyan: "#06b6d4",
+        },
+        // 保留neon色系用于渐变效果
+        neon: {
+          blue: "#3b82f6",
+          purple: "#8b5cf6",
+          pink: "#ec4899",
           green: "#10b981",
           orange: "#f97316",
           yellow: "#fbbf24",
@@ -61,17 +71,18 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "grid-pattern": "linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)",
+        "grid-pattern": "linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px)",
       },
       boxShadow: {
-        "neon-blue": "0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff",
-        "neon-purple": "0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6",
-        "neon-pink": "0 0 5px #f472b6, 0 0 10px #f472b6, 0 0 20px #f472b6",
-        "neon-green": "0 0 5px #10b981, 0 0 10px #10b981, 0 0 20px #10b981",
-        "neon-orange": "0 0 5px #f97316, 0 0 10px #f97316, 0 0 20px #f97316",
-        "glow-sm": "0 0 10px rgba(0, 212, 255, 0.3)",
-        "glow-md": "0 0 20px rgba(0, 212, 255, 0.4)",
-        "glow-lg": "0 0 30px rgba(0, 212, 255, 0.5)",
+        "soft": "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
+        "soft-md": "0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.04)",
+        "soft-lg": "0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 20px 50px -10px rgba(0, 0, 0, 0.04)",
+        "primary": "0 4px 15px rgba(59, 130, 246, 0.4)",
+        "primary-lg": "0 8px 30px rgba(59, 130, 246, 0.5)",
+        "purple": "0 4px 15px rgba(139, 92, 246, 0.4)",
+        "pink": "0 4px 15px rgba(236, 72, 153, 0.4)",
+        "green": "0 4px 15px rgba(16, 185, 129, 0.4)",
+        "orange": "0 4px 15px rgba(249, 115, 22, 0.4)",
       },
     },
   },

@@ -19,9 +19,9 @@ const CONTACT_ICONS = {
 };
 
 const contactList = [
-  { type: "wechat" as const, label: "微信", value: "fualan1990", color: "neon-green" },
-  { type: "mp" as const, label: "公众号", value: "科虎AI", color: "neon-blue" },
-  { type: "email" as const, label: "邮箱", value: "contact@scitiger.cn", color: "neon-purple" }
+  { type: "wechat" as const, label: "微信", value: "fualan1990", color: "green", bgColor: "bg-green-50", borderColor: "border-green-200" },
+  { type: "mp" as const, label: "公众号", value: "科虎AI", color: "blue", bgColor: "bg-blue-50", borderColor: "border-blue-200" },
+  { type: "email" as const, label: "邮箱", value: "contact@scitiger.cn", color: "purple", bgColor: "bg-purple-50", borderColor: "border-purple-200" }
 ];
 
 const values = [
@@ -32,22 +32,22 @@ const values = [
 ];
 
 const features = [
-  { title: "AI编程实战", desc: "Cursor AI 编程从入门到项目落地，涵盖图文教程与视频课程，零基础也能开发桌面工具和 Web 应用", icon: "💻", color: "neon-blue" },
-  { title: "AI创收分享", desc: "全栈开发上架、自媒体矩阵、工作流自动化、商业机会捕捉，助力一人公司成长变现", icon: "💰", color: "neon-yellow" },
-  { title: "AI绘画课程", desc: "Midjourney 参数详解与风格定制、Stable Diffusion ControlNet 控制网络，从基础到出图全流程", icon: "🎨", color: "neon-orange" },
-  { title: "ChatGPT精通", desc: "Prompt 进阶技巧、GPTs 开发、15种实用技巧，系统掌握 ChatGPT 的全部能力", icon: "🤖", color: "neon-green" },
-  { title: "工具与资源", desc: "图文+视频双教程、百度云资料库持续更新、高频 Q&A 避坑指南", icon: "📦", color: "neon-purple" },
-  { title: "应用开发", desc: "已开发科虎AI创影、小蜜蜂智能助手、公众号图文助手等多款AI应用，源码开放学习", icon: "⚡", color: "neon-cyan" }
+  { title: "AI编程实战", desc: "Cursor AI 编程从入门到项目落地，涵盖图文教程与视频课程，零基础也能开发桌面工具和 Web 应用", icon: "💻", bgColor: "bg-blue-50", borderColor: "border-blue-200" },
+  { title: "AI创收分享", desc: "全栈开发上架、自媒体矩阵、工作流自动化、商业机会捕捉，助力一人公司成长变现", icon: "💰", bgColor: "bg-yellow-50", borderColor: "border-yellow-200" },
+  { title: "AI绘画课程", desc: "Midjourney 参数详解与风格定制、Stable Diffusion ControlNet 控制网络，从基础到出图全流程", icon: "🎨", bgColor: "bg-orange-50", borderColor: "border-orange-200" },
+  { title: "ChatGPT精通", desc: "Prompt 进阶技巧、GPTs 开发、15种实用技巧，系统掌握 ChatGPT 的全部能力", icon: "🤖", bgColor: "bg-green-50", borderColor: "border-green-200" },
+  { title: "工具与资源", desc: "图文+视频双教程、百度云资料库持续更新、高频 Q&A 避坑指南", icon: "📦", bgColor: "bg-purple-50", borderColor: "border-purple-200" },
+  { title: "应用开发", desc: "已开发科虎AI创影、小蜜蜂智能助手、公众号图文助手等多款AI应用，源码开放学习", icon: "⚡", bgColor: "bg-cyan-50", borderColor: "border-cyan-200" }
 ];
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-dark relative">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white relative">
       {/* 背景装饰 */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-neon-blue/10 rounded-full blur-[128px]" />
-        <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-neon-purple/10 rounded-full blur-[128px]" />
-        <div className="absolute inset-0 grid-bg opacity-20" />
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-[128px]" />
+        <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-[128px]" />
+        <div className="absolute inset-0 grid-bg opacity-30" />
       </div>
 
       <div className="max-w-[85%] mx-auto py-28 px-6 relative">
@@ -58,11 +58,11 @@ export default function AboutPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
               关于科虎AI
             </span>
           </h1>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             不局限工具 · 聚焦实战场景 · 能力提升指南
           </p>
         </motion.div>
@@ -70,18 +70,18 @@ export default function AboutPage() {
         {/* 关于我们 */}
         <motion.div
           {...fadeInUp}
-          className="glass-card p-8 mb-12 border-l-2 border-neon-blue"
+          className="glass-card p-8 mb-12 border-l-4 border-blue-500"
         >
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3 text-gray-900">
+            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
               💡
             </span>
             关于我们
           </h2>
-          <p className="text-gray-400 leading-relaxed mb-4">
+          <p className="text-gray-600 leading-relaxed mb-4">
             科虎AI 是一个专注于 AI 技术实战应用的学习社群。我们不局限于某一款工具，而是围绕真实场景，手把手教你用 AI 提升效率、开发产品、实现商业变现——从入门到独立落地项目。
           </p>
-          <p className="text-gray-400 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed">
             社群已沉淀 Cursor AI 编程、ChatGPT、Midjourney、Stable Diffusion 四大体系课程，配合图文教程、视频课程、资料库与 Q&A 指南，帮助你在 AI 时代快速建立核心竞争力。所有课程永久开放，自主掌握学习节奏。
           </p>
         </motion.div>
@@ -91,8 +91,8 @@ export default function AboutPage() {
           {...fadeInUp}
           className="glass-card p-8 mb-12"
         >
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-white">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-neon-purple/20 to-neon-pink/20 flex items-center justify-center">
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-900">
+            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
               🎯
             </span>
             核心理念
@@ -105,13 +105,13 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative rounded-2xl bg-white/5 border border-white/10 p-6 text-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
+                className="group relative rounded-2xl bg-white border border-gray-100 p-6 text-center hover:shadow-lg hover:border-gray-200 transition-all duration-300 overflow-hidden"
               >
                 {/* 悬停渐变光效 */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${value.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
 
                 <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">{value.icon}</span>
-                <h3 className="text-lg font-bold mb-2 text-white group-hover:text-neon-blue transition-colors">{value.title}</h3>
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">{value.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}
@@ -123,8 +123,8 @@ export default function AboutPage() {
           {...fadeInUp}
           className="glass-card p-8 mb-12"
         >
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-white">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-neon-green/20 to-neon-cyan/20 flex items-center justify-center">
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-900">
+            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-100 to-cyan-100 flex items-center justify-center">
               📦
             </span>
             我们提供什么
@@ -137,13 +137,13 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                className="group flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300"
               >
-                <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-${feature.color}/10 border border-${feature.color}/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`flex-shrink-0 w-12 h-12 rounded-xl ${feature.bgColor} border ${feature.borderColor} flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1 text-white group-hover:text-neon-blue transition-colors">{feature.title}</h3>
+                  <h3 className="text-lg font-bold mb-1 text-gray-900 group-hover:text-blue-600 transition-colors">{feature.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{feature.desc}</p>
                 </div>
               </motion.div>
@@ -156,8 +156,8 @@ export default function AboutPage() {
           {...fadeInUp}
           className="glass-card p-8"
         >
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-white">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-neon-orange/20 to-neon-pink/20 flex items-center justify-center">
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-gray-900">
+            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-pink-100 flex items-center justify-center">
               📬
             </span>
             联系我们
@@ -172,14 +172,14 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className={`group flex items-center gap-4 px-8 py-6 rounded-2xl bg-white/5 border border-white/10 hover:border-${item.color}/30 hover:bg-white/10 transition-all duration-300`}
+                  className={`group flex items-center gap-4 px-8 py-6 rounded-2xl bg-white border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300`}
                 >
-                  <div className={`w-14 h-14 rounded-xl bg-${item.color}/10 border border-${item.color}/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className={`w-7 h-7 text-${item.color}`} />
+                  <div className={`w-14 h-14 rounded-xl ${item.bgColor} border ${item.borderColor} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className={`w-7 h-7 text-${item.color}-600`} />
                   </div>
                   <div>
                     <div className="text-sm text-gray-500 mb-1">{item.label}</div>
-                    <div className="font-bold text-lg text-white">{item.value}</div>
+                    <div className="font-bold text-lg text-gray-900">{item.value}</div>
                   </div>
                 </motion.div>
               );
